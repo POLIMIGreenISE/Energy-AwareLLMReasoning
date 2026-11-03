@@ -1,0 +1,18 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Mohseni N=1810 | our think 27% | his think 50%
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]Loading weights: 100%|##########| 103/103 [00:00<00:00, 11447.09it/s]
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|##########| 199/199 [00:00<00:00, 6056.47it/s]
+
+=== Mohseni CV AUC predicting: our energy-aware oracle  (best per cell) ===
+  features     |    LogReg       MLP LinearSVC   HistGBM   RBF-SVM
+  MiniLM-384   |     0.552     0.546     0.515     0.540     0.515
+  mpnet-768    |     0.555     0.525     0.537     0.568     0.537
+  tfidf        |     0.557     0.521     0.531       nan       nan
+  >>> BEST across ALL features x classifiers: AUC 0.568
+
+=== Mohseni CV AUC predicting: Mohseni's own labels  (best per cell) ===
+  features     |    LogReg       MLP LinearSVC   HistGBM   RBF-SVM
+  MiniLM-384   |     0.563     0.546     0.543     0.550     0.556
+  mpnet-768    |     0.589     0.567     0.568     0.570     0.585
+  tfidf        |     0.583     0.574     0.569       nan       nan
+  >>> BEST across ALL features x classifiers: AUC 0.589

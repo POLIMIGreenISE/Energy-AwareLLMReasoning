@@ -1,0 +1,34 @@
+# E4 — when does load-aware allocation pay?
+
+> **⚠ PARTIALLY SUPERSEDED (2026-08-05).** The fixed-threshold baseline here was swept over a
+> coarse grid that reached only 26 of the router's 684 achievable operating points, which
+> inflated the load-aware advantage. The methodology and the qualitative direction stand; the
+> magnitudes do not. **Authoritative numbers: `results/audit/fair_headtohead.md`.** Full detail:
+> `results/CORRECTIONS.md` §1.
+
+load-aware vs static-tau at MATCHED energy (cap = 40% of always-think), each frontier built on 5 held-out traces of 500 queries. 'busy-L' and 'load CV' are time-weighted over busy periods.
+
+## E4a — Sweeping mean arrival rate (fixed burst shape)
+
+|x|busy-L|load CV|utilisation|static-tau|load-aware|gap|
+|--|--|--|--|--|--|--|
+|0.05|1.2|0.42|0.08|0.8717|0.8710|-0.07pp|
+|0.1|1.4|0.56|0.16|0.8662|0.8672|+0.10pp|
+|0.2|1.9|0.74|0.31|0.8549|0.8612|+0.64pp|
+|0.4|3.2|0.88|0.51|0.8443|0.8516|+0.73pp|
+|0.8|5.7|1.00|0.74|0.8504|0.8545|+0.41pp|
+|1.6|10.7|1.11|0.92|0.8712|0.8757|+0.45pp|
+|3.2|23.6|0.85|0.99|0.8767|0.8806|+0.39pp|
+
+## E4b — Sweeping burstiness at ~fixed mean rate (0.5 req/s)
+
+|x|busy-L|load CV|utilisation|static-tau|load-aware|gap|
+|--|--|--|--|--|--|--|
+|1.0|2.6|0.54|0.90|0.8480|0.8513|+0.33pp|
+|2.0|2.6|0.59|0.88|0.8480|0.8464|-0.16pp|
+|4.0|2.8|0.72|0.80|0.8465|0.8474|+0.09pp|
+|8.0|3.0|0.81|0.69|0.8444|0.8474|+0.30pp|
+|16.0|3.3|0.88|0.55|0.8443|0.8506|+0.63pp|
+|32.0|3.4|0.97|0.34|0.8472|0.8551|+0.79pp|
+
+**Correlation of the gap with load variability (CV): r = 0.69** across both sweeps.

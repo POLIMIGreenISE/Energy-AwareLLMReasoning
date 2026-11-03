@@ -1,0 +1,5 @@
+grids: static 231  static-token 186  load-aware-const 347  load-aware 287 | 20 traces x 500
+[  521s] sweeps done
+[  521s] guards passed: 25%/40% reproduce E8d, 55%/70% load ingredient reproduces E8a
+[  521s] wrote results/e8/DECOMP_CAPS.md and e8_decomp_caps.json
+exit=0

@@ -1,0 +1,43 @@
+N=1810 | our think 27% | his labels think 50%
+Never 0.611@701mWh  Always 0.823@4237mWh  OracleEAA 0.8561  RandomEAA 0.7169 (43% of gain)
+
+scoring reasoning-router-mmbert-small on cuda ({'bs': 16, 'dtype': torch.float32}) ...
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights:   0%|          | 0/138 [00:00<?, ?it/s]Loading weights: 100%|##########| 138/138 [00:00<00:00, 12110.60it/s]
+    0/1810  0s  eta 27s
+    400/1810  6s  eta 21s
+    800/1810  13s  eta 15s
+    1200/1810  20s  eta 10s
+    1600/1810  26s  eta 3s
+  AUC vs HIS labels 0.663 | AUC vs OUR oracle 0.605 | EAA 0.7118 (-2pp vs random) | think-rate@0.5 44%
+     Big-Math-RL          AUC vs our oracle 0.593 | vs his 0.706
+     Nectar               AUC vs our oracle 0.554 | vs his 0.614
+     WildChat-filtered    AUC vs our oracle 0.586 | vs his 0.589
+
+scoring reasoning-router-0.6b on cuda ({'bs': 4, 'dtype': torch.bfloat16}) ...
+Loading weights:   0%|          | 0/311 [00:00<?, ?it/s]Loading weights: 100%|##########| 311/311 [00:00<00:00, 11830.69it/s]
+    0/1810  0s  eta 140s
+    100/1810  3s  eta 51s
+    200/1810  5s  eta 43s
+    300/1810  8s  eta 38s
+    400/1810  10s  eta 35s
+    500/1810  12s  eta 31s
+    600/1810  15s  eta 30s
+    700/1810  17s  eta 27s
+    800/1810  19s  eta 24s
+    900/1810  22s  eta 22s
+    1000/1810  24s  eta 20s
+    1100/1810  27s  eta 17s
+    1200/1810  30s  eta 15s
+    1300/1810  32s  eta 12s
+    1400/1810  34s  eta 10s
+    1500/1810  37s  eta 7s
+    1600/1810  39s  eta 5s
+    1700/1810  41s  eta 3s
+    1800/1810  43s  eta 0s
+  AUC vs HIS labels 0.673 | AUC vs OUR oracle 0.604 | EAA 0.7118 (-2pp vs random) | think-rate@0.5 43%
+     Big-Math-RL          AUC vs our oracle 0.625 | vs his 0.720
+     Nectar               AUC vs our oracle 0.517 | vs his 0.627
+     WildChat-filtered    AUC vs our oracle 0.561 | vs his 0.582
+
+wrote results/crossdataset/official_router_eval.md

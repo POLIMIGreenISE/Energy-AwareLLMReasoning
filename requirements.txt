@@ -1,0 +1,15 @@
+# Analysis environment: the simulator, the policy comparisons, the routers and the figures.
+# Needs no GPU. Versions are the ones reported in Appendix B of the thesis.
+numpy>=2.5
+scipy>=1.18
+scikit-learn>=1.9
+matplotlib>=3.11
+pyarrow>=16.0
+pytest>=8.0
+
+# Only scripts/fetch_data.py needs this, and only to re-fetch the third-party corpora.
+# The committed results under results/ do not depend on it.
+datasets>=3.0
+
+# The serving measurements additionally need a GPU host with vllm==0.10.2 and zeus-ml.
+# They are not reproducible from this file alone; see "Measurement environment" in README.md.

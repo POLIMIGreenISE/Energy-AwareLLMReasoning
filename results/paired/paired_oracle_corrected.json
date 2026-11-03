@@ -1,0 +1,752 @@
+[
+ {
+  "qid": "over_000",
+  "subset": "overthinkingbench",
+  "route_label": "no_think",
+  "correct_think": 1.0,
+  "correct_no_think": 1.0,
+  "energy_wh_think": 0.7576,
+  "energy_wh_no_think": 0.1495,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_001",
+  "subset": "overthinkingbench",
+  "route_label": "no_think",
+  "correct_think": 1.0,
+  "correct_no_think": 1.0,
+  "energy_wh_think": 0.5744,
+  "energy_wh_no_think": 0.0522,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_002",
+  "subset": "overthinkingbench",
+  "route_label": "no_think",
+  "correct_think": 1.0,
+  "correct_no_think": 1.0,
+  "energy_wh_think": 1.1517,
+  "energy_wh_no_think": 0.4224,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "under_001",
+  "subset": "underthinkingbench",
+  "route_label": "think",
+  "correct_think": 0.0,
+  "correct_no_think": 0.0,
+  "energy_wh_think": 12.3213,
+  "energy_wh_no_think": 1.4774,
+  "oracle": "think"
+ },
+ {
+  "qid": "over_003",
+  "subset": "overthinkingbench",
+  "route_label": "no_think",
+  "correct_think": 1.0,
+  "correct_no_think": 1.0,
+  "energy_wh_think": 1.2486,
+  "energy_wh_no_think": 0.0573,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_004",
+  "subset": "overthinkingbench",
+  "route_label": "no_think",
+  "correct_think": 1.0,
+  "correct_no_think": 1.0,
+  "energy_wh_think": 1.4167,
+  "energy_wh_no_think": 0.7424,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_005",
+  "subset": "overthinkingbench",
+  "route_label": "no_think",
+  "correct_think": 1.0,
+  "correct_no_think": 1.0,
+  "energy_wh_think": 0.5856,
+  "energy_wh_no_think": 0.1255,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_006",
+  "subset": "overthinkingbench",
+  "route_label": "no_think",
+  "correct_think": 1.0,
+  "correct_no_think": 1.0,
+  "energy_wh_think": 1.6369,
+  "energy_wh_no_think": 0.7875,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_007",
+  "subset": "overthinkingbench",
+  "route_label": "no_think",
+  "correct_think": 1.0,
+  "correct_no_think": 1.0,
+  "energy_wh_think": 1.2488,
+  "energy_wh_no_think": 0.1558,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_008",
+  "subset": "overthinkingbench",
+  "route_label": "no_think",
+  "correct_think": 1.0,
+  "correct_no_think": 1.0,
+  "energy_wh_think": 0.9423,
+  "energy_wh_no_think": 0.1381,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_009",
+  "subset": "overthinkingbench",
+  "route_label": "no_think",
+  "correct_think": 0.667,
+  "correct_no_think": 1.0,
+  "energy_wh_think": 0.9251,
+  "energy_wh_no_think": 0.1074,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_010",
+  "subset": "overthinkingbench",
+  "route_label": "no_think",
+  "correct_think": 1.0,
+  "correct_no_think": 1.0,
+  "energy_wh_think": 1.6549,
+  "energy_wh_no_think": 0.663,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_011",
+  "subset": "overthinkingbench",
+  "route_label": "no_think",
+  "correct_think": 1.0,
+  "correct_no_think": 1.0,
+  "energy_wh_think": 1.5539,
+  "energy_wh_no_think": 0.8121,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_012",
+  "subset": "overthinkingbench",
+  "route_label": "no_think",
+  "correct_think": 1.0,
+  "correct_no_think": 1.0,
+  "energy_wh_think": 1.1845,
+  "energy_wh_no_think": 0.5358,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_013",
+  "subset": "overthinkingbench",
+  "route_label": "no_think",
+  "correct_think": 0.0,
+  "correct_no_think": 0.333,
+  "energy_wh_think": 0.5236,
+  "energy_wh_no_think": 0.0669,
+  "oracle": "think"
+ },
+ {
+  "qid": "over_014",
+  "subset": "overthinkingbench",
+  "route_label": "no_think",
+  "correct_think": 1.0,
+  "correct_no_think": 1.0,
+  "energy_wh_think": 0.7202,
+  "energy_wh_no_think": 0.2578,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_015",
+  "subset": "overthinkingbench",
+  "route_label": "no_think",
+  "correct_think": 1.0,
+  "correct_no_think": 1.0,
+  "energy_wh_think": 0.5281,
+  "energy_wh_no_think": 0.0176,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_016",
+  "subset": "overthinkingbench",
+  "route_label": "no_think",
+  "correct_think": 0.0,
+  "correct_no_think": 0.0,
+  "energy_wh_think": 1.7124,
+  "energy_wh_no_think": 0.6041,
+  "oracle": "think"
+ },
+ {
+  "qid": "over_017",
+  "subset": "overthinkingbench",
+  "route_label": "no_think",
+  "correct_think": 1.0,
+  "correct_no_think": 1.0,
+  "energy_wh_think": 1.0616,
+  "energy_wh_no_think": 0.1671,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_018",
+  "subset": "overthinkingbench",
+  "route_label": "no_think",
+  "correct_think": 1.0,
+  "correct_no_think": 1.0,
+  "energy_wh_think": 1.2335,
+  "energy_wh_no_think": 0.4614,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_019",
+  "subset": "overthinkingbench",
+  "route_label": "no_think",
+  "correct_think": 1.0,
+  "correct_no_think": 1.0,
+  "energy_wh_think": 1.2855,
+  "energy_wh_no_think": 0.4985,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_020",
+  "subset": "overthinkingbench",
+  "route_label": "no_think",
+  "correct_think": 1.0,
+  "correct_no_think": 1.0,
+  "energy_wh_think": 0.7349,
+  "energy_wh_no_think": 0.074,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_021",
+  "subset": "overthinkingbench",
+  "route_label": "no_think",
+  "correct_think": 1.0,
+  "correct_no_think": 1.0,
+  "energy_wh_think": 1.5414,
+  "energy_wh_no_think": 0.3594,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_022",
+  "subset": "overthinkingbench",
+  "route_label": "no_think",
+  "correct_think": 1.0,
+  "correct_no_think": 1.0,
+  "energy_wh_think": 1.3537,
+  "energy_wh_no_think": 0.4503,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_023",
+  "subset": "overthinkingbench",
+  "route_label": "no_think",
+  "correct_think": 1.0,
+  "correct_no_think": 1.0,
+  "energy_wh_think": 0.6476,
+  "energy_wh_no_think": 0.083,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_024",
+  "subset": "overthinkingbench",
+  "route_label": "no_think",
+  "correct_think": 1.0,
+  "correct_no_think": 1.0,
+  "energy_wh_think": 1.5305,
+  "energy_wh_no_think": 0.7333,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_025",
+  "subset": "overthinkingbench",
+  "route_label": "no_think",
+  "correct_think": 1.0,
+  "correct_no_think": 1.0,
+  "energy_wh_think": 0.5449,
+  "energy_wh_no_think": 0.0761,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_026",
+  "subset": "overthinkingbench",
+  "route_label": "no_think",
+  "correct_think": 1.0,
+  "correct_no_think": 1.0,
+  "energy_wh_think": 1.1336,
+  "energy_wh_no_think": 0.1426,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_027",
+  "subset": "overthinkingbench",
+  "route_label": "no_think",
+  "correct_think": 1.0,
+  "correct_no_think": 1.0,
+  "energy_wh_think": 1.3747,
+  "energy_wh_no_think": 0.6809,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_028",
+  "subset": "overthinkingbench",
+  "route_label": "no_think",
+  "correct_think": 1.0,
+  "correct_no_think": 1.0,
+  "energy_wh_think": 1.4158,
+  "energy_wh_no_think": 0.7598,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_029",
+  "subset": "overthinkingbench",
+  "route_label": "no_think",
+  "correct_think": 1.0,
+  "correct_no_think": 1.0,
+  "energy_wh_think": 0.5652,
+  "energy_wh_no_think": 0.0091,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_030",
+  "subset": "overthinkingbench",
+  "route_label": "no_think",
+  "correct_think": 1.0,
+  "correct_no_think": 1.0,
+  "energy_wh_think": 1.0873,
+  "energy_wh_no_think": 0.1971,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_031",
+  "subset": "overthinkingbench",
+  "route_label": "no_think",
+  "correct_think": 1.0,
+  "correct_no_think": 1.0,
+  "energy_wh_think": 1.6758,
+  "energy_wh_no_think": 0.7129,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_032",
+  "subset": "overthinkingbench",
+  "route_label": "no_think",
+  "correct_think": 1.0,
+  "correct_no_think": 1.0,
+  "energy_wh_think": 0.5607,
+  "energy_wh_no_think": 0.103,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_033",
+  "subset": "overthinkingbench",
+  "route_label": "no_think",
+  "correct_think": 1.0,
+  "correct_no_think": 1.0,
+  "energy_wh_think": 0.6402,
+  "energy_wh_no_think": 0.1048,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_034",
+  "subset": "overthinkingbench",
+  "route_label": "no_think",
+  "correct_think": 1.0,
+  "correct_no_think": 1.0,
+  "energy_wh_think": 0.937,
+  "energy_wh_no_think": 0.1756,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_035",
+  "subset": "overthinkingbench",
+  "route_label": "no_think",
+  "correct_think": 1.0,
+  "correct_no_think": 1.0,
+  "energy_wh_think": 6.486,
+  "energy_wh_no_think": 0.1602,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_036",
+  "subset": "overthinkingbench",
+  "route_label": "no_think",
+  "correct_think": 1.0,
+  "correct_no_think": 1.0,
+  "energy_wh_think": 0.3478,
+  "energy_wh_no_think": 0.0574,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_037",
+  "subset": "overthinkingbench",
+  "route_label": "no_think",
+  "correct_think": 1.0,
+  "correct_no_think": 1.0,
+  "energy_wh_think": 4.3234,
+  "energy_wh_no_think": 0.3162,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_038",
+  "subset": "overthinkingbench",
+  "route_label": "no_think",
+  "correct_think": 0.667,
+  "correct_no_think": 1.0,
+  "energy_wh_think": 2.5697,
+  "energy_wh_no_think": 0.186,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_039",
+  "subset": "overthinkingbench",
+  "route_label": "no_think",
+  "correct_think": 1.0,
+  "correct_no_think": 1.0,
+  "energy_wh_think": 0.9391,
+  "energy_wh_no_think": 0.1089,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "under_003",
+  "subset": "underthinkingbench",
+  "route_label": "think",
+  "correct_think": 0.0,
+  "correct_no_think": 0.0,
+  "energy_wh_think": 8.906,
+  "energy_wh_no_think": 1.0184,
+  "oracle": "think"
+ },
+ {
+  "qid": "under_004",
+  "subset": "underthinkingbench",
+  "route_label": "think",
+  "correct_think": 1.0,
+  "correct_no_think": 0.333,
+  "energy_wh_think": 3.402,
+  "energy_wh_no_think": 0.4376,
+  "oracle": "think"
+ },
+ {
+  "qid": "under_005",
+  "subset": "underthinkingbench",
+  "route_label": "think",
+  "correct_think": 0.0,
+  "correct_no_think": 0.0,
+  "energy_wh_think": 4.6255,
+  "energy_wh_no_think": 0.7515,
+  "oracle": "think"
+ },
+ {
+  "qid": "under_006",
+  "subset": "underthinkingbench",
+  "route_label": "think",
+  "correct_think": 0.667,
+  "correct_no_think": 0.0,
+  "energy_wh_think": 9.3394,
+  "energy_wh_no_think": 0.7676,
+  "oracle": "think"
+ },
+ {
+  "qid": "under_007",
+  "subset": "underthinkingbench",
+  "route_label": "think",
+  "correct_think": 0.0,
+  "correct_no_think": 0.0,
+  "energy_wh_think": 16.3044,
+  "energy_wh_no_think": 1.7178,
+  "oracle": "think"
+ },
+ {
+  "qid": "under_008",
+  "subset": "underthinkingbench",
+  "route_label": "think",
+  "correct_think": 0.0,
+  "correct_no_think": 0.667,
+  "energy_wh_think": 14.7915,
+  "energy_wh_no_think": 0.0023,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "under_009",
+  "subset": "underthinkingbench",
+  "route_label": "think",
+  "correct_think": 0.0,
+  "correct_no_think": 0.0,
+  "energy_wh_think": 12.82,
+  "energy_wh_no_think": 1.2247,
+  "oracle": "think"
+ },
+ {
+  "qid": "under_010",
+  "subset": "underthinkingbench",
+  "route_label": "think",
+  "correct_think": 0.0,
+  "correct_no_think": 0.0,
+  "energy_wh_think": 6.4208,
+  "energy_wh_no_think": 0.7095,
+  "oracle": "think"
+ },
+ {
+  "qid": "under_012",
+  "subset": "underthinkingbench",
+  "route_label": "think",
+  "correct_think": 0.0,
+  "correct_no_think": 0.0,
+  "energy_wh_think": 17.5054,
+  "energy_wh_no_think": 0.0042,
+  "oracle": "think"
+ },
+ {
+  "qid": "under_013",
+  "subset": "underthinkingbench",
+  "route_label": "think",
+  "correct_think": 0.0,
+  "correct_no_think": 0.0,
+  "energy_wh_think": 5.1865,
+  "energy_wh_no_think": 0.5706,
+  "oracle": "think"
+ },
+ {
+  "qid": "under_014",
+  "subset": "underthinkingbench",
+  "route_label": "think",
+  "correct_think": 0.0,
+  "correct_no_think": 0.0,
+  "energy_wh_think": 17.492,
+  "energy_wh_no_think": 1.9655,
+  "oracle": "think"
+ },
+ {
+  "qid": "under_015",
+  "subset": "underthinkingbench",
+  "route_label": "think",
+  "correct_think": 0.0,
+  "correct_no_think": 0.0,
+  "energy_wh_think": 17.4972,
+  "energy_wh_no_think": 1.8794,
+  "oracle": "think"
+ },
+ {
+  "qid": "under_016",
+  "subset": "underthinkingbench",
+  "route_label": "think",
+  "correct_think": 0.0,
+  "correct_no_think": 0.0,
+  "energy_wh_think": 16.3138,
+  "energy_wh_no_think": 1.8604,
+  "oracle": "think"
+ },
+ {
+  "qid": "under_017",
+  "subset": "underthinkingbench",
+  "route_label": "think",
+  "correct_think": 0.0,
+  "correct_no_think": 0.0,
+  "energy_wh_think": 4.4307,
+  "energy_wh_no_think": 0.334,
+  "oracle": "think"
+ },
+ {
+  "qid": "under_018",
+  "subset": "underthinkingbench",
+  "route_label": "think",
+  "correct_think": 0.0,
+  "correct_no_think": 0.0,
+  "energy_wh_think": 17.4781,
+  "energy_wh_no_think": 1.4778,
+  "oracle": "think"
+ },
+ {
+  "qid": "under_019",
+  "subset": "underthinkingbench",
+  "route_label": "think",
+  "correct_think": 0.667,
+  "correct_no_think": 0.667,
+  "energy_wh_think": 5.7556,
+  "energy_wh_no_think": 0.6318,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "under_020",
+  "subset": "underthinkingbench",
+  "route_label": "think",
+  "correct_think": 0.0,
+  "correct_no_think": 0.0,
+  "energy_wh_think": 16.145,
+  "energy_wh_no_think": 1.32,
+  "oracle": "think"
+ },
+ {
+  "qid": "under_021",
+  "subset": "underthinkingbench",
+  "route_label": "think",
+  "correct_think": 0.0,
+  "correct_no_think": 0.0,
+  "energy_wh_think": 16.281,
+  "energy_wh_no_think": 0.5026,
+  "oracle": "think"
+ },
+ {
+  "qid": "under_022",
+  "subset": "underthinkingbench",
+  "route_label": "think",
+  "correct_think": 0.0,
+  "correct_no_think": 0.0,
+  "energy_wh_think": 17.4953,
+  "energy_wh_no_think": 1.2416,
+  "oracle": "think"
+ },
+ {
+  "qid": "under_023",
+  "subset": "underthinkingbench",
+  "route_label": "think",
+  "correct_think": 0.0,
+  "correct_no_think": 0.0,
+  "energy_wh_think": 2.961,
+  "energy_wh_no_think": 0.7818,
+  "oracle": "think"
+ },
+ {
+  "qid": "under_025",
+  "subset": "underthinkingbench",
+  "route_label": "think",
+  "correct_think": 0.0,
+  "correct_no_think": 0.0,
+  "energy_wh_think": 3.3952,
+  "energy_wh_no_think": 1.0037,
+  "oracle": "think"
+ },
+ {
+  "qid": "under_026",
+  "subset": "underthinkingbench",
+  "route_label": "think",
+  "correct_think": 0.0,
+  "correct_no_think": 0.0,
+  "energy_wh_think": 4.9469,
+  "energy_wh_no_think": 0.5063,
+  "oracle": "think"
+ },
+ {
+  "qid": "under_027",
+  "subset": "underthinkingbench",
+  "route_label": "think",
+  "correct_think": 0.0,
+  "correct_no_think": 0.0,
+  "energy_wh_think": 15.327,
+  "energy_wh_no_think": 0.5105,
+  "oracle": "think"
+ },
+ {
+  "qid": "under_028",
+  "subset": "underthinkingbench",
+  "route_label": "think",
+  "correct_think": 0.333,
+  "correct_no_think": 1.0,
+  "energy_wh_think": 3.3599,
+  "energy_wh_no_think": 0.1284,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "under_029",
+  "subset": "underthinkingbench",
+  "route_label": "think",
+  "correct_think": 0.0,
+  "correct_no_think": 0.0,
+  "energy_wh_think": 3.0363,
+  "energy_wh_no_think": 0.27,
+  "oracle": "think"
+ },
+ {
+  "qid": "under_030",
+  "subset": "underthinkingbench",
+  "route_label": "think",
+  "correct_think": 0.0,
+  "correct_no_think": 0.0,
+  "energy_wh_think": 17.0399,
+  "energy_wh_no_think": 1.9456,
+  "oracle": "think"
+ },
+ {
+  "qid": "under_031",
+  "subset": "underthinkingbench",
+  "route_label": "think",
+  "correct_think": 0.0,
+  "correct_no_think": 0.0,
+  "energy_wh_think": 11.5613,
+  "energy_wh_no_think": 0.0047,
+  "oracle": "think"
+ },
+ {
+  "qid": "under_032",
+  "subset": "underthinkingbench",
+  "route_label": "think",
+  "correct_think": 0.0,
+  "correct_no_think": 0.0,
+  "energy_wh_think": 17.3475,
+  "energy_wh_no_think": 1.2264,
+  "oracle": "think"
+ },
+ {
+  "qid": "under_034",
+  "subset": "underthinkingbench",
+  "route_label": "think",
+  "correct_think": 1.0,
+  "correct_no_think": 0.0,
+  "energy_wh_think": 7.2149,
+  "energy_wh_no_think": 1.0068,
+  "oracle": "think"
+ },
+ {
+  "qid": "under_035",
+  "subset": "underthinkingbench",
+  "route_label": "think",
+  "correct_think": 0.0,
+  "correct_no_think": 0.0,
+  "energy_wh_think": 3.0334,
+  "energy_wh_no_think": 0.4313,
+  "oracle": "think"
+ },
+ {
+  "qid": "under_036",
+  "subset": "underthinkingbench",
+  "route_label": "think",
+  "correct_think": 0.0,
+  "correct_no_think": 0.0,
+  "energy_wh_think": 2.8522,
+  "energy_wh_no_think": 0.5557,
+  "oracle": "think"
+ },
+ {
+  "qid": "under_037",
+  "subset": "underthinkingbench",
+  "route_label": "think",
+  "correct_think": 0.0,
+  "correct_no_think": 0.0,
+  "energy_wh_think": 12.3562,
+  "energy_wh_no_think": 1.9417,
+  "oracle": "think"
+ },
+ {
+  "qid": "under_038",
+  "subset": "underthinkingbench",
+  "route_label": "think",
+  "correct_think": 0.0,
+  "correct_no_think": 0.0,
+  "energy_wh_think": 14.9287,
+  "energy_wh_no_think": 0.2379,
+  "oracle": "think"
+ },
+ {
+  "qid": "under_039",
+  "subset": "underthinkingbench",
+  "route_label": "think",
+  "correct_think": 0.0,
+  "correct_no_think": 0.0,
+  "energy_wh_think": 17.216,
+  "energy_wh_no_think": 1.0926,
+  "oracle": "think"
+ }
+]

@@ -1,0 +1,8 @@
+conv: n=19366  58 min  rate 5.53/s  inter-arrival CV 1.09
+code: n=8819  57 min  rate 2.57/s  inter-arrival CV 13.15
+[  149s] Poisson @0.8 (control)   L   4.0 CV 0.48  never 40 -> always 56 Wh
+[  339s] Azure conv @0.8          L   4.5 CV 0.49  never 38 -> always 57 Wh
+[  547s] Azure code @0.8          L  11.6 CV 0.79  never 17 -> always 58 Wh
+[  749s] Azure code @0.8 (thinned) L   9.2 CV 0.85  never 20 -> always 56 Wh
+
+[750s] wrote results/e11/REAL_TRACE.md + fig

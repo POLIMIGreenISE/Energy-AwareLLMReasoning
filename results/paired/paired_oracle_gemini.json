@@ -1,0 +1,1484 @@
+[
+ {
+  "qid": "over_000",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_001",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_002",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_003",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_004",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_005",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_006",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_007",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_008",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_009",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_010",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_011",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_012",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_013",
+  "cn": 0.5,
+  "ct": 0.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_014",
+  "cn": 0.5,
+  "ct": 1.0,
+  "oracle": "think"
+ },
+ {
+  "qid": "over_015",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_016",
+  "cn": 1.0,
+  "ct": 0.5,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_017",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_018",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_019",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_020",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_021",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_022",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_023",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_024",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_025",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_026",
+  "cn": 0.5,
+  "ct": 1.0,
+  "oracle": "think"
+ },
+ {
+  "qid": "over_027",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_028",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_029",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_030",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_031",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_032",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_033",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_034",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_035",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_036",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_037",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_038",
+  "cn": 1.0,
+  "ct": 0.5,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_039",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_040",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_041",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_042",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_043",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_044",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_045",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_046",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_047",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_048",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_049",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_050",
+  "cn": 1.0,
+  "ct": 0.5,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_051",
+  "cn": 0.5,
+  "ct": 1.0,
+  "oracle": "think"
+ },
+ {
+  "qid": "over_052",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_053",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_054",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_055",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_056",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_057",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_058",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_059",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_060",
+  "cn": 0.0,
+  "ct": 0.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_061",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_062",
+  "cn": 0.0,
+  "ct": 0.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_063",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_064",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_065",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_066",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_067",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_068",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_069",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_070",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_071",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_072",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_073",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_074",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_075",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_076",
+  "cn": 0.5,
+  "ct": 1.0,
+  "oracle": "think"
+ },
+ {
+  "qid": "over_077",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_078",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_079",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_080",
+  "cn": 0.0,
+  "ct": 0.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_081",
+  "cn": 0.5,
+  "ct": 1.0,
+  "oracle": "think"
+ },
+ {
+  "qid": "over_082",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_083",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_084",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_085",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_086",
+  "cn": 1.0,
+  "ct": 0.5,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_087",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_088",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_089",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_090",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_091",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_092",
+  "cn": 0.0,
+  "ct": 0.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_093",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_094",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_095",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_096",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_097",
+  "cn": 0.5,
+  "ct": 1.0,
+  "oracle": "think"
+ },
+ {
+  "qid": "over_098",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_099",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_100",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_101",
+  "cn": 0.0,
+  "ct": 0.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_102",
+  "cn": 0.0,
+  "ct": 0.5,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_103",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_104",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_105",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_106",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_107",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_108",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_109",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_110",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_111",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_112",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_113",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_114",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_115",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_116",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_117",
+  "cn": 0.5,
+  "ct": 1.0,
+  "oracle": "think"
+ },
+ {
+  "qid": "over_118",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_119",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_120",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_121",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_122",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_123",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_124",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_125",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_126",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_127",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_128",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_129",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_130",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_131",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_132",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_133",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_134",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_135",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_136",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_137",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_138",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_139",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_140",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_141",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_142",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_143",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_144",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_145",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_146",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_147",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_148",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "over_149",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "under_003",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "under_004",
+  "cn": 0.0,
+  "ct": 1.0,
+  "oracle": "think"
+ },
+ {
+  "qid": "under_005",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "under_006",
+  "cn": 0.5,
+  "ct": 1.0,
+  "oracle": "think"
+ },
+ {
+  "qid": "under_007",
+  "cn": 0.0,
+  "ct": 0.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "under_010",
+  "cn": 0.0,
+  "ct": 0.5,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "under_013",
+  "cn": 0.5,
+  "ct": 1.0,
+  "oracle": "think"
+ },
+ {
+  "qid": "under_017",
+  "cn": 0.5,
+  "ct": 1.0,
+  "oracle": "think"
+ },
+ {
+  "qid": "under_019",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "under_020",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "under_021",
+  "cn": 0.0,
+  "ct": 0.5,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "under_023",
+  "cn": 0.5,
+  "ct": 1.0,
+  "oracle": "think"
+ },
+ {
+  "qid": "under_025",
+  "cn": 0.5,
+  "ct": 1.0,
+  "oracle": "think"
+ },
+ {
+  "qid": "under_026",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "under_027",
+  "cn": 0.0,
+  "ct": 1.0,
+  "oracle": "think"
+ },
+ {
+  "qid": "under_028",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "under_029",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "under_031",
+  "cn": 0.0,
+  "ct": 0.5,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "under_034",
+  "cn": 0.0,
+  "ct": 1.0,
+  "oracle": "think"
+ },
+ {
+  "qid": "under_035",
+  "cn": 0.5,
+  "ct": 1.0,
+  "oracle": "think"
+ },
+ {
+  "qid": "under_036",
+  "cn": 0.0,
+  "ct": 1.0,
+  "oracle": "think"
+ },
+ {
+  "qid": "under_037",
+  "cn": 0.0,
+  "ct": 0.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "under_038",
+  "cn": 0.0,
+  "ct": 0.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "under_039",
+  "cn": 0.0,
+  "ct": 0.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "under_042",
+  "cn": 0.0,
+  "ct": 1.0,
+  "oracle": "think"
+ },
+ {
+  "qid": "under_043",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "under_045",
+  "cn": 0.5,
+  "ct": 1.0,
+  "oracle": "think"
+ },
+ {
+  "qid": "under_046",
+  "cn": 0.0,
+  "ct": 1.0,
+  "oracle": "think"
+ },
+ {
+  "qid": "under_047",
+  "cn": 0.0,
+  "ct": 1.0,
+  "oracle": "think"
+ },
+ {
+  "qid": "under_048",
+  "cn": 0.0,
+  "ct": 1.0,
+  "oracle": "think"
+ },
+ {
+  "qid": "under_050",
+  "cn": 1.0,
+  "ct": 0.5,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "under_051",
+  "cn": 0.0,
+  "ct": 1.0,
+  "oracle": "think"
+ },
+ {
+  "qid": "under_052",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "under_054",
+  "cn": 0.0,
+  "ct": 1.0,
+  "oracle": "think"
+ },
+ {
+  "qid": "under_055",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "under_056",
+  "cn": 0.0,
+  "ct": 1.0,
+  "oracle": "think"
+ },
+ {
+  "qid": "under_057",
+  "cn": 0.5,
+  "ct": 1.0,
+  "oracle": "think"
+ },
+ {
+  "qid": "under_058",
+  "cn": 0.0,
+  "ct": 1.0,
+  "oracle": "think"
+ },
+ {
+  "qid": "under_059",
+  "cn": 0.0,
+  "ct": 0.5,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "under_060",
+  "cn": 0.0,
+  "ct": 0.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "under_061",
+  "cn": 0.0,
+  "ct": 0.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "under_062",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "under_063",
+  "cn": 0.0,
+  "ct": 0.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "under_064",
+  "cn": 0.0,
+  "ct": 0.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "under_065",
+  "cn": 0.0,
+  "ct": 1.0,
+  "oracle": "think"
+ },
+ {
+  "qid": "under_066",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "under_068",
+  "cn": 0.0,
+  "ct": 1.0,
+  "oracle": "think"
+ },
+ {
+  "qid": "under_069",
+  "cn": 0.0,
+  "ct": 1.0,
+  "oracle": "think"
+ },
+ {
+  "qid": "under_070",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "under_071",
+  "cn": 0.0,
+  "ct": 0.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "under_072",
+  "cn": 0.0,
+  "ct": 1.0,
+  "oracle": "think"
+ },
+ {
+  "qid": "under_073",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "under_075",
+  "cn": 0.0,
+  "ct": 1.0,
+  "oracle": "think"
+ },
+ {
+  "qid": "under_076",
+  "cn": 0.0,
+  "ct": 1.0,
+  "oracle": "think"
+ },
+ {
+  "qid": "under_077",
+  "cn": 0.0,
+  "ct": 1.0,
+  "oracle": "think"
+ },
+ {
+  "qid": "under_078",
+  "cn": 0.0,
+  "ct": 0.5,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "under_079",
+  "cn": 0.0,
+  "ct": 0.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "under_081",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "under_084",
+  "cn": 0.0,
+  "ct": 0.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "under_086",
+  "cn": 0.0,
+  "ct": 0.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "under_087",
+  "cn": 0.5,
+  "ct": 1.0,
+  "oracle": "think"
+ },
+ {
+  "qid": "under_088",
+  "cn": 0.0,
+  "ct": 0.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "under_089",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "under_091",
+  "cn": 0.0,
+  "ct": 1.0,
+  "oracle": "think"
+ },
+ {
+  "qid": "under_093",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "under_095",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "under_096",
+  "cn": 0.0,
+  "ct": 0.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "under_098",
+  "cn": 0.0,
+  "ct": 1.0,
+  "oracle": "think"
+ },
+ {
+  "qid": "under_102",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "under_105",
+  "cn": 0.0,
+  "ct": 1.0,
+  "oracle": "think"
+ },
+ {
+  "qid": "under_106",
+  "cn": 0.0,
+  "ct": 1.0,
+  "oracle": "think"
+ },
+ {
+  "qid": "under_108",
+  "cn": 0.5,
+  "ct": 1.0,
+  "oracle": "think"
+ },
+ {
+  "qid": "under_109",
+  "cn": 0.0,
+  "ct": 0.5,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "under_110",
+  "cn": 0.0,
+  "ct": 0.5,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "under_111",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "under_113",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "under_114",
+  "cn": 0.5,
+  "ct": 1.0,
+  "oracle": "think"
+ },
+ {
+  "qid": "under_120",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "under_122",
+  "cn": 0.0,
+  "ct": 1.0,
+  "oracle": "think"
+ },
+ {
+  "qid": "under_124",
+  "cn": 0.5,
+  "ct": 1.0,
+  "oracle": "think"
+ },
+ {
+  "qid": "under_125",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "under_126",
+  "cn": 0.0,
+  "ct": 1.0,
+  "oracle": "think"
+ },
+ {
+  "qid": "under_127",
+  "cn": 0.0,
+  "ct": 1.0,
+  "oracle": "think"
+ },
+ {
+  "qid": "under_128",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "under_129",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "under_130",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "under_131",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "under_133",
+  "cn": 0.0,
+  "ct": 0.5,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "under_134",
+  "cn": 0.5,
+  "ct": 1.0,
+  "oracle": "think"
+ },
+ {
+  "qid": "under_136",
+  "cn": 0.0,
+  "ct": 1.0,
+  "oracle": "think"
+ },
+ {
+  "qid": "under_137",
+  "cn": 0.5,
+  "ct": 1.0,
+  "oracle": "think"
+ },
+ {
+  "qid": "under_140",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "under_141",
+  "cn": 0.0,
+  "ct": 0.5,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "under_143",
+  "cn": 0.0,
+  "ct": 1.0,
+  "oracle": "think"
+ },
+ {
+  "qid": "under_144",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ },
+ {
+  "qid": "under_146",
+  "cn": 0.0,
+  "ct": 1.0,
+  "oracle": "think"
+ },
+ {
+  "qid": "under_147",
+  "cn": 1.0,
+  "ct": 1.0,
+  "oracle": "no_think"
+ }
+]

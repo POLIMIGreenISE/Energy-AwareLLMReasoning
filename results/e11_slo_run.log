@@ -1,0 +1,5 @@
+grids: static 231  load-aware 347 | 12 traces x 500
+[  177s] sweeps done: Poisson @0.8 (control) 169s, Azure conv @0.8 168s, Azure code @0.8 177s, Azure code @0.8 (thinned) 176s
+[  177s] guard passed: unconstrained gaps reproduce REAL_TRACE.md exactly
+[  177s] wrote results/e11/SLO.md and e11_slo_rows.json
+exit=0

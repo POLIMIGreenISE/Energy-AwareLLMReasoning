@@ -1,0 +1,16 @@
+# no_think reasoning-leakage audit
+
+- generations: 3654; `<think>` tags: 0.0%; strong markers: 18.8%; soft: 20.3%
+- overthinkingbench: strong 2.3%, tokens leaked/clean 294/247
+- underthinkingbench: strong 62.4%, tokens leaked/clean 939/655
+- think-mode final answers with same markers (sanity): 19.0%
+- no_think acc leaked 0.403 vs clean 0.917
+- energy inflation from leakage: 28.0% (no_think 420->302 mWh; think/no_think ratio 8.8x->12.3x)
+
+## Longest leaked examples (first 300 chars)
+
+- **under_009** (2048 tok): We are given: - **Start value**: 0 (red) - **Target value**: 12 - **Buttons**: - **A**: Subtract 2 (when any) - **B**: Subtract 2 (when red) - **C**: Add 1 (when any) The **light toggles between red and green** every time a button is pressed. --- ### Step-by-step reasoning: We need to **r...
+- **under_016** (2048 tok): We are given a system with four tokens: `A#`, `#A`, `B#`, `#B`. These are the only valid tokens in the system. The rules for rewriting are: - `A# #A` → becomes nothing - `A# #B` → becomes `#B A#` - `B# #A` → becomes `#A B#` - `B# #B` → becomes nothing The goal is to **compute** the given...
+- **under_020** (2048 tok): We are given a system with four tokens: `A#`, `#A`, `B#`, and `#B`. The rules for rewriting neighbor tokens are: - `A# #A` → becomes `nothing` - `A# #B` → becomes `#B A#` - `B# #A` → becomes `#A B#` - `B# #B` → becomes `nothing` The initial program is: ``` A# #A #A B# #A #B A# A# B# #A #A #A A#...
+- **under_056** (2048 tok): Let's analyze the **Knight Swap Challenge** step by step. --- ### **Initial Board Setup** ``` A B C D ---------------- 3 | | w | . | . | ---------------- 2 | | | . | . | ---------------- 1 | B | B | . | w | ---------------- ``` - **White Knights (w):** - A3 - D1...
+- **under_067** (2048 tok): To solve this expression step by step, we'll evaluate the operations in order, keeping in mind that we're working with **signed integers** and **arbitrary bit depth** (so we don't have to worry about overflow or underflow constraints). We'll also ensure that **negative numbers are represented as neg...

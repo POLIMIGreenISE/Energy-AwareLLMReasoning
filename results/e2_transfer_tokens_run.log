@@ -1,0 +1,5 @@
+4 regimes x 2 budgets x 3 token models x (9 prices + load-aware) | eval 20 hist 5
+[  164s] done: near-idle 112s, moderate 140s, saturated 164s, bursty 109s
+[  164s] guard passed: never/always anchors reproduce E8 section 0
+[  164s] wrote results/e2/TRANSFER_TOKENS.md and e2_transfer_tokens.json
+exit=0

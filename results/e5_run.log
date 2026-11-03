@@ -1,0 +1,15 @@
+variant                 never Wh  always Wh |  C1 token-blind  C1 load-aware |  C2 static   C2 load   C2 gap
+baseline                    78.9      424.0 |          +94.8%          -9.6% |     0.8651    0.8784   +1.33pp
+KV growth a=0.15            80.1      643.9 |         +110.5%          -8.1% |     0.8650    0.8770   +1.21pp
+KV growth a=0.40            82.2     1010.4 |         +123.0%          -7.3% |     0.8644    0.8770   +1.27pp
+prefill 200 J/req          106.7      451.8 |          +84.0%          -8.5% |     0.8651    0.8784   +1.33pp
+prefill 800 J/req          190.0      535.2 |          +62.7%          -6.3% |     0.8651    0.8784   +1.33pp
+max_batch=24                78.9      424.3 |          +94.8%          -9.6% |     0.8651    0.8784   +1.33pp
+max_batch=96                78.9      424.0 |          +94.8%          -9.6% |     0.8651    0.8784   +1.33pp
+step interpolation          81.3      442.6 |          +95.5%          -7.5% |     0.8651    0.8779   +1.28pp
+KV .4 + prefill 800        193.3     1121.5 |          +98.8%          -5.9% |     0.8644    0.8770   +1.27pp
+
+C1 (token proxy misses the budget, load-aware hits it): HOLDS in every variant
+C2 (load-aware beats a fixed threshold at matched energy): HOLDS in every variant
+
+wrote results/e5/sensitivity.md

@@ -1,0 +1,21 @@
+budget 35% = 200 Wh | load-aware -6.9%
+   c= 3.422 J/tok ->   -44.9%
+   c= 2.400 J/tok ->   -24.5%
+   c= 1.702 J/tok ->    -7.0%
+   c= 1.200 J/tok ->   +32.5%
+   c= 0.865 J/tok ->   +76.2%
+   c= 0.600 J/tok ->  +107.7%
+   c= 0.454 J/tok ->  +110.8%
+   c= 0.244 J/tok ->  +110.8%
+   c= 0.134 J/tok ->  +110.8%
+budget 60% = 286 Wh | load-aware -5.8%
+   c= 3.422 J/tok ->   -47.2%
+   c= 2.400 J/tok ->   -34.6%
+   c= 1.702 J/tok ->    -1.5%
+   c= 1.200 J/tok ->   +24.6%
+   c= 0.865 J/tok ->   +44.6%
+   c= 0.600 J/tok ->   +47.5%
+   c= 0.454 J/tok ->   +47.5%
+   c= 0.244 J/tok ->   +47.5%
+   c= 0.134 J/tok ->   +47.5%
+saved results/artifact/e2_spectrum.json

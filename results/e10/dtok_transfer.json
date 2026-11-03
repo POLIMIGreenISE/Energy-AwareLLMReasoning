@@ -1,0 +1,80 @@
+[
+ {
+  "target": "Mohseni (realistic mixed traffic)",
+  "n": 1044,
+  "dropped_truncated": 762,
+  "true_mean": 1862.353448275862,
+  "spearman": 0.005549812667050516,
+  "median_ratio": 2.4596817804736917,
+  "within2x": 0.3850574712643678,
+  "const_median_ratio": 2.9367612339398685,
+  "const_within2x": 0.2825670498084291,
+  "indomain_spearman": 0.6938216328753223,
+  "indomain_within2x": 0.6475095785440613
+ },
+ {
+  "target": "Mohseni (realistic mixed traffic) \u2014 Nectar",
+  "n": 512,
+  "dropped_truncated": 0,
+  "true_mean": 890.556640625,
+  "spearman": 0.177983724073194,
+  "median_ratio": 2.6534586994900047,
+  "within2x": 0.359375,
+  "const_median_ratio": 4.224538887325266,
+  "const_within2x": 0.162109375,
+  "indomain_spearman": NaN,
+  "indomain_within2x": NaN
+ },
+ {
+  "target": "Mohseni (realistic mixed traffic) \u2014 WildChat-filtered",
+  "n": 269,
+  "dropped_truncated": 0,
+  "true_mean": 1239.7620817843865,
+  "spearman": 0.05132252674156521,
+  "median_ratio": 1.805887184674852,
+  "within2x": 0.5687732342007435,
+  "const_median_ratio": 2.9736089282176583,
+  "const_within2x": 0.23048327137546468,
+  "indomain_spearman": NaN,
+  "indomain_within2x": NaN
+ },
+ {
+  "target": "Mohseni (realistic mixed traffic) \u2014 Big-Math-RL",
+  "n": 260,
+  "dropped_truncated": 0,
+  "true_mean": 4394.265384615384,
+  "spearman": 0.0015880992241121678,
+  "median_ratio": 3.111183514838761,
+  "within2x": 0.25,
+  "const_median_ratio": 1.825673519724412,
+  "const_within2x": 0.5692307692307692,
+  "indomain_spearman": NaN,
+  "indomain_within2x": NaN
+ },
+ {
+  "target": "GSM8K",
+  "n": 1311,
+  "dropped_truncated": 8,
+  "true_mean": 2079.1411136536994,
+  "spearman": 0.1308113343421845,
+  "median_ratio": 1.610802980910182,
+  "within2x": 0.6575133485888635,
+  "const_median_ratio": 1.674887855681607,
+  "const_within2x": 0.6666666666666666,
+  "indomain_spearman": 0.24459803487017656,
+  "indomain_within2x": 0.7711670480549199
+ },
+ {
+  "target": "GSM8K \u2014 gsm8k",
+  "n": 1311,
+  "dropped_truncated": 0,
+  "true_mean": 2079.1411136536994,
+  "spearman": 0.1308113343421845,
+  "median_ratio": 1.610802980910182,
+  "within2x": 0.6575133485888635,
+  "const_median_ratio": 1.674887855681607,
+  "const_within2x": 0.6666666666666666,
+  "indomain_spearman": NaN,
+  "indomain_within2x": NaN
+ }
+]

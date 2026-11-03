@@ -1,0 +1,19 @@
+mohseni: 1812 queries with both modes
+[grade_both] giving up (gemini): 'candidates'
+labeled 1810 | judge 2, cache 1810, fail 2
+oracle label dist: {'think': 490, 'no_think': 1320}
+
+=== mohseni: OTB-trained routers on the new distribution (N=1810) ===
+Never 0.611@701mWh  Always 0.823@4237mWh  Oracle EAA 0.8561
+Random-router EAA 0.7164 (43% of oracle gain) <- floor any real router must beat
+  LogReg+MiniLM  label-AUC(vs our oracle) 0.505 | EAA 0.7304 (49% of oracle gain, +6pp vs random)
+  ModernBERT     label-AUC(vs our oracle) 0.521 | EAA 0.7301 (49% of oracle gain, +6pp vs random)
+  p_need         label-AUC(vs our oracle) 0.564 | EAA 0.6572 (19% of oracle gain, -24pp vs random)
+
+our energy-aware oracle vs Mohseni's labels: agreement 0.554 (our think% 27, his 50)
+  AIME-1983-2024       agree 0.591 (n=22)
+  Big-Math-RL          agree 0.559 (n=696)
+  Nectar               agree 0.583 (n=593)
+  WildChat-filtered    agree 0.509 (n=499)
+
+wrote results/crossdataset/eval_mohseni.md

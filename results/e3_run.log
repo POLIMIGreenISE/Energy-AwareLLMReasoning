@@ -1,0 +1,26 @@
+
+### bimodal: never 79 Wh / p95 13s | always 424 Wh / p95 186s
+  at a 217 Wh cap (40% of always-think):
+    policy                               acc   p95 lat   think
+    static-tau                       0.8302     13.5s      0%
+    load-aware (think when busy)     0.8906     85.1s     14%
+    inverse (think when idle)        0.8488     20.3s      4%
+  accuracy under BOTH a 217 Wh cap and a p95 SLO:
+    policy                               SLO 20s     SLO 40s     SLO 80s    SLO none
+    static-tau                            0.8302      0.8302      0.8302      0.8302
+    load-aware (think when busy)          0.8338      0.8594      0.8594      0.8906
+    inverse (think when idle)             0.8292      0.8488      0.8488      0.8488
+
+### stable: never 29 Wh / p95 14s | always 56 Wh / p95 225s
+  at a 40 Wh cap (40% of always-think):
+    policy                               acc   p95 lat   think
+    static-tau                       0.8302     13.9s      0%
+    load-aware (think when busy)     0.8348     15.0s      2%
+    inverse (think when idle)        0.8336     14.7s      1%
+  accuracy under BOTH a 40 Wh cap and a p95 SLO:
+    policy                               SLO 20s     SLO 41s     SLO 82s    SLO none
+    static-tau                            0.8302      0.8302      0.8302      0.8302
+    load-aware (think when busy)          0.8348      0.8348      0.8348      0.8348
+    inverse (think when idle)             0.8336      0.8336      0.8336      0.8336
+
+wrote results/e3/e3_tradeoff.md, e3_tradeoff.png

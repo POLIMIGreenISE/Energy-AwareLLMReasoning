@@ -1,0 +1,13 @@
+queries 1710 | J/token spread 42x | router: 683 distinct scores
+grids: static 231  load-aware 287  load-aware-const 347  random 45  oracle 41  static-token 186   | 20 eval traces x 500 queries | E[dtok] 2370 tok
+
+[  339s] near-idle  never 0.8306 @  100.7 Wh (L  1.6, CV 0.51, p95  13.8s)  ->  always 0.9279 @  172.8 Wh (L  7.9)
+[  881s] moderate   never 0.8306 @   39.9 Wh (L  4.0, CV 0.48, p95  14.1s)  ->  always 0.9279 @   56.7 Wh (L 28.9)
+[ 1511s] saturated  never 0.8306 @   12.0 Wh (L 14.8, CV 0.33, p95  15.1s)  ->  always 0.9279 @   47.3 Wh (L 36.7)
+[ 1894s] bursty     never 0.8306 @   81.6 Wh (L  2.0, CV 1.53, p95  14.1s)  ->  always 0.9279 @  417.1 Wh (L  3.2)
+[ 1982s] E8c done: near-idle
+[ 2099s] E8c done: moderate
+[ 2231s] E8c done: saturated
+[ 2306s] E8c done: bursty
+
+[2308s] wrote results/e8/CONSOLIDATED.md + 4 figures

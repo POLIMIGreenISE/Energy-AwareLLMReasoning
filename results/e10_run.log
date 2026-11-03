@@ -1,0 +1,11 @@
+1710 queries | dtok mean 2370 median 895 min 102 max 16137
+  constant E[dtok]       rho +nan | R2(log) -0.414 | median ratio err 3.04x | within 2x 19%
+  prompt length only     rho +0.532 | R2(log) +0.622 | median ratio err 1.47x | within 2x 72%
+  TF-IDF + ridge         rho +0.761 | R2(log) +0.837 | median ratio err 1.25x | within 2x 92%
+
+grids: static-tau 231  token (true dtok) 186  token (PREDICTED) 205  load-aware (const) 270  load-aware (PREDICTED) 312  load-aware (true dtok) 287  random@rate 45  oracle 41
+[  355s] near-idle done
+[  896s] saturated done
+[ 1212s] bursty done
+
+[1213s] wrote results/e10/DTOK_PREDICTABILITY.md + fig
