@@ -93,7 +93,7 @@ comparison's *favour* this time, which is why they matter.
 from the paired dataset. The static baseline saw only `score(q)`. So the dynamic policy was given a
 per-query quantity that (i) the baseline was denied and (ii) **no live router can observe**, since the
 length of a reasoning chain is not known before generating it. Every load-aware number in E1–E5, and
-in the 5 August supervisor update, carries this advantage.
+in the 5 August progress summary, carries this advantage.
 
 **What changed.** E8 adds a 2×2 decomposition separating the two ingredients the rule uses — live load
 and per-query token counts — and the headline now reports `load-aware-const`, which replaces
@@ -122,7 +122,7 @@ families now resolve 170–244 distinct think-rates against the static baseline'
 
 ### 5c. What the consolidated result says
 
-|claim|before (5 Aug artifact)|**after (E8)**|
+|claim|before (5 Aug summary)|**after (E8)**|
 |--|--|--|
 |load-aware vs static, bimodal/bursty|+2.18 / +1.53 / +0.48 / −0.08pp|**+1.88 / +1.53 / +0.68 / +0.17pp** (deployable rule)|
 |the same result on *steady* traffic|not reported by concurrency|**mostly negative** — −0.88 to −3.25pp at moderate and saturated load|
@@ -255,7 +255,7 @@ and how fast λ may move, which works regardless of why the pace signal was low.
 
 ---
 
-## 8. Thesis review experiments (2026-09-15): one table replaced, one claim corrected, one question closed
+## 8. Review experiments (2026-09-15): one table replaced, one claim corrected, one question closed
 
 ### 8a. The calibration-transfer table could not be reproduced, and its budget was mislabelled
 
@@ -272,7 +272,7 @@ never/always anchors reproduce CONSOLIDATED.md section 0), with true, constant a
 estimated token counts. Same conclusion, now reproducible: the price that works moves by about an
 order of magnitude with the traffic (best single price misses one regime by 51%), while the load-aware
 model misses by at most 4.7% (true tokens), 8.1% (constant, the shipped rule) and 3.8% (estimated).
-The thesis table and figure for section 5.2 now come from this file. **Superseded:**
+The budget-adherence table and figure now come from this file. **Superseded:**
 `calibration_transfer.md` (-62% / +111% are replaced by -51% / +109%).
 
 ### 8b. "Wherever the two ingredients were separated, the accuracy came from token cost" was false
@@ -287,7 +287,7 @@ load helps measurably in exactly the cells where the deployable rule wins (burst
 near-idle at the loosest) and harms elsewhere. *Counts and cells superseded by section 9 below, which
 re-ran this experiment with the grid fix: 7 help, 2 harm.*
 
-### 8c. Bursty production traffic under a latency target (the question section 5.5 left open)
+### 8c. Bursty production traffic under a latency target (a question left open earlier)
 
 `scripts/e11_slo.py` -> `results/e11/SLO.md` (guarded: unconstrained rows reproduce REAL_TRACE.md).
 Under a p95 target of 3x the never-reasoning p95 or tighter, the load-aware rule is ahead in 0 of 32
@@ -342,5 +342,5 @@ cheaper the cheap moments are than a typical one: 14.0x (bursty), 2.0x (near-idl
 1.3x (saturated), which does order them, and orders the production processes where mean concurrency
 cannot.
 
-**Superseded:** the pre-fix figures above, everywhere they appeared -- section 5.3, 5.4, 5.5, 5.6 and
-the chapter summary, the English and Italian abstracts, and section 4.5's table of the token estimate.
+**Superseded:** the pre-fix figures above, everywhere they appeared, including the
+summaries and the table of the token estimate.

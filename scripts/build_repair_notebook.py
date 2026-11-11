@@ -70,7 +70,7 @@ after it.''')
 # ---------------- setup cells (identical to notebook 11) ----------------
 md(r'''## 0. Repo setup''')
 code(r'''import os, subprocess, sys
-REPO, BRANCH = "cemalgndzz/llm-routing-tesina", "main"
+REPO, BRANCH = "POLIMIGreenISE/Energy-AwareLLMReasoning", "main"
 TOKEN = None
 try:
     from google.colab import userdata; TOKEN = userdata.get("GITHUB_TOKEN")
@@ -87,8 +87,8 @@ else:
     subprocess.run(["git", "-C", repo_dir, "pull", "--ff-only"], check=True)
 os.chdir(repo_dir)
 subprocess.run(["git", "remote", "set-url", "origin", auth], check=True)
-subprocess.run(["git", "config", "user.name", "cemalgndzz"], check=True)
-subprocess.run(["git", "config", "user.email", "cgogit@gmail.com"], check=True)
+subprocess.run(["git", "config", "user.name", "your-name"], check=True)
+subprocess.run(["git", "config", "user.email", "you@example.com"], check=True)
 if os.getcwd() not in sys.path: sys.path.insert(0, os.getcwd())
 os.makedirs("results/repair", exist_ok=True)
 print("cwd:", os.getcwd())''')

@@ -1,10 +1,10 @@
-"""Generate the two figures for the 30 July Vitali update (embedded as base64 PNGs).
+"""Two overview figures: held-out router transfer, and the pooled energy-accuracy Pareto front.
 
 Fig 1: held-out transfer -- each router's EAA advantage over the random-routing floor on
        GSM8K and Mohseni (trained routers positive, p_need negative).
 Fig 2: pooled energy-accuracy Pareto (Experiment A, N=4839) -- pooled router vs OTB-only vs
        p_need vs oracle frontier vs random floor, on the natural distribution.
-Palette matches the artifact (warm paper, green accent, amber, brick-red).
+Palette: warm paper, green accent, amber, brick-red.
 Out: results/pooled/fig_transfer.png, results/pooled/fig_pooled_pareto.png
 """
 import json, os, re, sys

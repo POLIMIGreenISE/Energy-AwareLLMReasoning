@@ -10,7 +10,7 @@ Never 0.611 @ 701 mWh; Always 0.823 @ 4237 mWh; Oracle EAA 0.8561. Judge: refere
 |ModernBERT|0.521|0.7301|49%|+6pp|
 |p_need|0.564|0.6572|19%|-24pp|
 
-Our energy-aware oracle vs Mohseni's own labels: **agreement 0.554** (our think 27% vs his 50%). By source:
+Our energy-aware oracle vs Mohseni's own labels: **agreement 0.554** (our think 27% vs Mohseni's 50%). By source:
 
 - AIME-1983-2024       agree 0.591 (n=22)
 - Big-Math-RL          agree 0.559 (n=696)

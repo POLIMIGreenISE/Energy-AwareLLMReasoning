@@ -1,14 +1,14 @@
-"""Run Mohseni's OFFICIAL released routers on his own test split, scored with OUR metrics.
+"""Run Mohseni's officially released routers on the dataset's own test split, scored with OUR metrics.
 
 Checkpoints (both binary seq-classifiers, id2label {0:no_think, 1:think}):
   - AmirMohseni/reasoning-router-mmbert-small   (ModernBERT, 22L/384h)
   - AmirMohseni/reasoning-router-0.6b           (Qwen3-0.6B)
 
 Evaluated three ways on the SAME 1,810 queries we generated Qwen3-8B answers for:
-  (a) AUC vs HIS OWN labels   -> is his label learnable at all (he trained on 70k)?
+  (a) AUC vs the dataset labels -> is the published label learnable at all (trained on 70k)?
   (b) AUC vs OUR energy-aware oracle -> does it predict whether thinking actually helps Qwen3-8B?
   (c) EAA + vs the random-routing floor -> does it deliver real energy-accuracy routing?
-(a) is his home turf; (b)/(c) are the deployment question. Runs locally on GPU.
+(a) is the setting the routers were trained for; (b)/(c) are the deployment question. Runs locally on GPU.
 Out: results/crossdataset/official_router_eval.md
 """
 import json, os, sys
@@ -42,7 +42,7 @@ y = np.array([d["y"] for d in D]); his = np.array([d["his"] for d in D])
 cn = np.array([d["cn"] for d in D]); ct = np.array([d["ct"] for d in D])
 en = np.array([d["en"] for d in D]); et = np.array([d["et"] for d in D])
 src = np.array([d["src"] for d in D])
-print(f"N={N} | our think {y.mean()*100:.0f}% | his labels think {his.mean()*100:.0f}%")
+print(f"N={N} | our think {y.mean()*100:.0f}% | dataset labels think {his.mean()*100:.0f}%")
 
 dev = "cuda" if torch.cuda.is_available() else "cpu"
 @torch.no_grad()
@@ -106,17 +106,17 @@ for repo in ["AmirMohseni/reasoning-router-mmbert-small", "AmirMohseni/reasoning
                      gain=gain(e_), vs_rand=gain(e_) - gain(rand_eaa),
                      think_rate=float((s >= 0.5).mean()), mean_p=float(s.mean()), s=s)
     r = RES[name]
-    print(f"  AUC vs HIS labels {r['auc_his']:.3f} | AUC vs OUR oracle {r['auc_our']:.3f} | "
+    print(f"  AUC vs dataset labels {r['auc_his']:.3f} | AUC vs OUR oracle {r['auc_our']:.3f} | "
           f"EAA {r['eaa']:.4f} ({r['vs_rand']:+.0f}pp vs random) | think-rate@0.5 {r['think_rate']*100:.0f}%")
     for sname in ["Big-Math-RL", "Nectar", "WildChat-filtered"]:
         m = src == sname
         if m.sum() > 30 and len(set(y[m])) > 1:
-            print(f"     {sname:20} AUC vs our oracle {roc_auc_score(y[m], s[m]):.3f} | vs his {roc_auc_score(his[m], s[m]):.3f}")
+            print(f"     {sname:20} AUC vs our oracle {roc_auc_score(y[m], s[m]):.3f} | vs dataset {roc_auc_score(his[m], s[m]):.3f}")
 
-lines = [f"# Mohseni's OFFICIAL routers on his own test split (N={N})\n",
+lines = [f"# Mohseni's officially released routers on the dataset's own test split (N={N})\n",
          f"Never {never:.3f} @ {e_lo:.0f} mWh; Always {always:.3f} @ {e_hi:.0f} mWh; Oracle EAA {oracle_eaa:.4f}; "
          f"**Random floor EAA {rand_eaa:.4f} ({gain(rand_eaa):.0f}% of oracle gain)**.\n",
-         "|router|AUC vs HIS labels|AUC vs OUR oracle|EAA|vs random|think-rate@0.5|", "|--|--|--|--|--|--|"]
+         "|router|AUC vs dataset labels|AUC vs OUR oracle|EAA|vs random|think-rate@0.5|", "|--|--|--|--|--|--|"]
 for n_, r in RES.items():
     lines.append(f"|{n_}|{r['auc_his']:.3f}|{r['auc_our']:.3f}|{r['eaa']:.4f}|{r['vs_rand']:+.0f}pp|{r['think_rate']*100:.0f}%|")
 lines += ["|*our LogReg (OTB-trained)*|—|0.505|0.7304|+6pp|—|",

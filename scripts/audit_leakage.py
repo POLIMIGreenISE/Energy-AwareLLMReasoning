@@ -116,7 +116,7 @@ with open(f"{OUT}/leakage.md", "w", encoding="utf-8") as f:
     f.write(f"- energy inflation from leakage: {(e_actual-e_cf)/e_actual*100:.1f}% "
             f"(no_think {e_actual:.0f}->{e_cf:.0f} mWh; think/no_think ratio "
             f"{think_e/e_actual:.1f}x->{think_e/e_cf:.1f}x)\n")
-# top examples for qualitative appendix
+# top examples for qualitative inspection
 ex = sorted([r for r in nt if r["leak_strong"]], key=lambda r: -r["completion_tokens"])[:5]
 with open(f"{OUT}/leakage.md", "a", encoding="utf-8") as f:
     f.write("\n## Longest leaked examples (first 300 chars)\n\n")

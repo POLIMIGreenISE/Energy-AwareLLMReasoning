@@ -65,16 +65,16 @@ Oracle routes **490/1810 (27%)** to think.
 3. **Label definitions are genuinely model- and energy-specific.** Our energy-aware oracle labels
    only **27%** of Mohseni "think" vs Mohseni's own **50%** — agreement just **55.4%**, and only
    ~56–59% even on the math sources. This *disentangles* the earlier free-test ambiguity (AUC 0.50
-   vs his labels): the low agreement is not purely router failure, it is partly that "needs
+   vs Mohseni's labels): the low agreement is not purely router failure, it is partly that "needs
    thinking" for Qwen3-8B (does thinking flip *this model* from wrong→right?) ≠ Mohseni's
    definition. We can now quantify that split, which the label-only free test could not.
 
-4. **The overthinking thesis holds on held-out data.** On GSM8K, thinking buys +1.2pp for 9× the
+4. **The overthinking finding holds on held-out data.** On GSM8K, thinking buys +1.2pp for 9× the
    energy and the oracle routes 97% to no-think; on Mohseni it buys a real +21.2pp. A router only
    pays off where the distribution actually contains think-needed queries — exactly why a mixed
    benchmark matters.
 
-**Honest framing for the thesis:** this is a *valuable negative/limitation result*, not a fatal
+**Framing:** this is a *valuable negative/limitation result*, not a fatal
 flaw. Zero-shot cross-benchmark transfer is weak (trained routers barely beat random; p_need loses
 to it), which is a known phenomenon and the standard motivation for diverse-distribution training
 and/or light target-domain calibration. The clean, model-consistent, energy-aware labels + the

@@ -1,7 +1,7 @@
 # E14 — does the energy curve transfer to another GPU?
 
 The first question anyone asks of this work is *one GPU, one model — does it generalise?* The whole
-thesis rests on J(L), joules per output token as a function of server concurrency, measured on an
+analysis rests on J(L), joules per output token as a function of server concurrency, measured on an
 A100-SXM4-40GB as falling **42×** from batch 1 to 64.
 
 The policy does not need the absolute joules. λ is re-tuned per deployment, so multiplying J(L) by
@@ -62,7 +62,7 @@ both families), re-run on each measured curve:
 
 On the L4 the load-aware policy loses at tight caps and only wins at the loosest one.
 
-**This is not a contradiction — it is the thesis applied one level up.** The advantage requires
+**This is not a contradiction — it is the same argument applied one level up.** The advantage requires
 *variability* in concurrency (E8, E11). The L4 is four times slower, so the same arrival process
 leaves it more consistently loaded: the never→always energy span compresses from 5.1× to 2.2×,
 because thinking requests queue, concurrency rises, and the marginal token gets cheap. A more
@@ -79,7 +79,7 @@ advantage should return on the L4 under burstier traffic, which is exactly what 
 
 ---
 
-## 3. What to say in the thesis
+## 3. Conclusions
 
 1. **The measurement generalises.** Two architectures, a 3.2× difference in power envelope, 4× in
    throughput — same normalised curve to 4.6%. RQ1 is not an A100 result.

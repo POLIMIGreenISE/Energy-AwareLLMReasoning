@@ -1,4 +1,4 @@
-"""Figures for the 5 Aug Vitali update (palette-matched to the weekly-update artifact).
+"""Overview figures: the energy mechanism, budget adherence, the accuracy frontier, validation.
 
 fig1_mechanism : why J/token collapses -- power is flat while throughput scales
 fig2_budget    : E2, the flagship -- token proxy cannot hold an energy budget
@@ -17,7 +17,7 @@ INK="#1F2823"; MUT="#5C6660"; ACC="#1D6B4F"; ACC2="#3E9B76"; AMBER="#9A6A15"; RE
 plt.rcParams.update({"font.family":"Segoe UI","font.size":11,"text.color":INK,
                      "axes.edgecolor":RULE,"axes.labelcolor":INK,"xtick.color":INK,"ytick.color":INK,
                      "axes.linewidth":0.9,"figure.dpi":150})
-OUT="results/artifact"; os.makedirs(OUT, exist_ok=True)
+OUT="results/overview"; os.makedirs(OUT, exist_ok=True)
 
 # ---------------------------------------------------------------- fig 1: the mechanism
 conc=[json.loads(l) for l in open("results/batching/concurrency.jsonl",encoding="utf-8") if l.strip()]

@@ -1,10 +1,10 @@
-"""Vitali's proposal: label both-fail queries as `think` (Mohseni's rule) — does it help?
+"""Labeling both-fail queries as `think` (Mohseni's rule): does it help?
 
 Two label definitions differing ONLY on both-wrong queries:
   A  energy-aware (ours) : think iff (think correct AND no-think wrong)   -> both-wrong = no_think
-  B  difficulty (his)    : think iff (no-think wrong)                     -> both-wrong = think
+  B  difficulty (Mohseni): think iff (no-think wrong)                     -> both-wrong = think
 
-Hypothesis (Vitali): B is easier for a text router to learn (it is "is this hard?", which correlates
+Hypothesis: B is easier for a text router to learn (it is "is this hard?", which correlates
 with topic/surface form). Counter-hypothesis (energy): B routes hopeless queries to thinking, burning
 energy for zero accuracy gain.
 
@@ -145,7 +145,7 @@ for name in ["otb", "mohseni", "gsm8k", "POOLED"]:
           f"{waste:6.1f} mWh/query avg ({100*waste/en[idx].mean():.0f}% of the never-think budget), 0 accuracy gain")
 
 with open("results/pooled/bothfail_label.md", "w", encoding="utf-8") as f:
-    f.write("# Vitali's proposal: label both-fail queries as `think`?\n\n")
+    f.write("# Labeling both-fail queries as `think`?\n\n")
     f.write("A = energy-aware (ours, both-wrong -> no_think); B = difficulty (both-wrong -> think).\n\n")
     f.write("|slice|both-wrong|AUC label A|AUC label B|EAA router-A|EAA router-B|random|\n|--|--|--|--|--|--|--|\n")
     for n_, bw, aA, aB, eA, eB, er, orc, nev in rows_out:

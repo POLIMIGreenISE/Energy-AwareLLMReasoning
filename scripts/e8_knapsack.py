@@ -9,9 +9,9 @@ Reported:
   1. the spread of reasoning's token cost across the corpus (why dividing by it matters at all);
   2. rank correlations between the router score, the token cost and the accuracy change
      (tie-corrected: the accuracy change takes only five values, most of them zero);
-  3. the matched-budget comparison behind the thesis table tab:knapsack.
+  3. the matched-budget comparison of ranking by score against ranking by score per token.
 
-Correctness conventions follow the thesis: the repair rate uses the strict convention of tab:rq2
+Correctness conventions: the repair rate uses the strict convention
 (correct means a judge score of 1), the accuracy gain uses the graded judge scores.
 
 Free -- no GPU, seconds. Out: results/e8/KNAPSACK.md
@@ -34,7 +34,7 @@ s = np.array([S[x] for x in q])
 dt = np.array([max(wl.dtok(x), 1.0) for x in q])            # >=1 so the ratio is defined
 ct = np.array([wl.ct[x] for x in q]); cn = np.array([wl.cn[x] for x in q])
 dacc = ct - cn
-repair = (ct >= 1.0) & (cn < 1.0)                           # strict convention of tab:rq2
+repair = (ct >= 1.0) & (cn < 1.0)                           # strict convention: correct means score 1
 
 # 1. spread of the token cost
 p10, p25, p50, p75, p90 = np.percentile(dt, [10, 25, 50, 75, 90])

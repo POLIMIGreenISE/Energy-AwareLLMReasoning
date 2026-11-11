@@ -1,5 +1,5 @@
 # Analysis environment: the simulator, the policy comparisons, the routers and the figures.
-# Needs no GPU. Versions are the ones reported in Appendix B of the thesis.
+# Needs no GPU. The minimum versions are the ones the committed results were produced with.
 numpy>=2.5
 scipy>=1.18
 scikit-learn>=1.9

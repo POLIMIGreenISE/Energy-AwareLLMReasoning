@@ -27,7 +27,7 @@ accuracy for a fraction of the energy) and approaches the Oracle.
 
 md(r'''## 0. Setup (clone for data + `src`)''')
 code(r'''import os, subprocess, sys
-REPO, BRANCH = "cemalgndzz/llm-routing-tesina", "main"
+REPO, BRANCH = "POLIMIGreenISE/Energy-AwareLLMReasoning", "main"
 try:
     from google.colab import userdata
     TOKEN = userdata.get("GITHUB_TOKEN")

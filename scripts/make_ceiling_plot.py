@@ -1,8 +1,8 @@
-"""Fig 3 for the Vitali update: the routability ceiling.
+"""The routability ceiling.
 
 A text router predicts the OTB benchmark's label (~0.9) but not realistic traffic's (~0.5) --
 INCLUDING the prior-art router's OWN labels (0.563). Horizontal bars of within-slice text->label
-CV AUC (numbers from diagnose_mohseni_routability.py + test_his_label_routability.py).
+CV AUC (numbers from diagnose_mohseni_routability.py + analyze_label_routability.py).
 Out: results/pooled/fig_ceiling.png
 """
 import matplotlib
@@ -17,7 +17,7 @@ rows = [
     ("OTB — full benchmark (our router)",        0.911, ACC),
     ("OTB — hard-math half only",                0.794, ACC2),
     ("“is it hard?” (difficulty) label",          0.620, AMBER),
-    ("Mohseni — his OWN published labels",       0.563, RED),
+    ("Mohseni — its own published labels",       0.563, RED),
     ("Mohseni Big-Math (math)",                  0.562, RED),
     ("Mohseni — our energy-aware labels",        0.552, RED),
     ("GSM8K (math)",                             0.550, RED),

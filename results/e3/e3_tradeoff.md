@@ -58,7 +58,7 @@ efficient precisely because the batch is full, which is also when queues are lon
 gain over static-tau falls from **+6.0pp (unconstrained) to +0.36pp at a 20s p95**, while remaining
 +2.9pp at 40-80s. In the stable regime all policies sit within 0.5pp regardless of SLO.
 
-**Scope statement for the thesis:** load-aware reasoning allocation is for **energy-constrained,
+**Scope statement:** load-aware reasoning allocation is for **energy-constrained,
 latency-tolerant** serving — batch and asynchronous pipelines, off-peak processing — and not for
 interactive serving under a strict tail-latency target, where a fixed threshold does nearly as well.
 This also explains the conditionality found in E4: bursts are simultaneously where thinking is

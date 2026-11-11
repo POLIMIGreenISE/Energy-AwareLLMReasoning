@@ -1,6 +1,6 @@
 """Tests for src/router.py -- the deployable energy-aware router. Run: python tests/test_router.py
 
-These check the properties the thesis claims, not just that the code runs:
+These check the properties the router is designed to have, not just that the code runs:
   * the price curve the router reads is the MEASURED one (42x spread, J = power / throughput);
   * the threshold MOVES with load, in the right direction and by the right factor;
   * the same query gets opposite answers on an idle vs a busy server (the whole point);

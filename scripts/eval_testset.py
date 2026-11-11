@@ -159,7 +159,7 @@ if DS == "mohseni":
     agree = (y == his).mean()
     from sklearn.metrics import roc_auc_score as auc2
     print(f"\nour energy-aware oracle vs Mohseni's labels: agreement {agree:.3f} "
-          f"(our think% {y.mean()*100:.0f}, his {his.mean()*100:.0f})")
+          f"(our think% {y.mean()*100:.0f}, Mohseni {his.mean()*100:.0f})")
     extra = f"\nOur energy-aware oracle vs Mohseni labels: agreement {agree:.3f}.\n"
     # by source
     for src in sorted(set(data[q]["source"] for q in common)):

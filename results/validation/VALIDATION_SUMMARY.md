@@ -83,7 +83,7 @@ concurrency (2.5, not 16) shows the mechanism directly.
 
 **This is already captured by the simulator**, which tracks each request individually and recomputes
 L at every event, so batches drain naturally — which is part of why the energy prediction lands
-within 10%. It also sharpens the thesis claim: in real mixed traffic a thinking request that
+within 10%. It also sharpens the main claim: in real mixed traffic a thinking request that
 outlives its batch-mates is *more* expensive than a naive batch-size argument suggests, so the
 energy case for not thinking unnecessarily is stronger, not weaker.
 

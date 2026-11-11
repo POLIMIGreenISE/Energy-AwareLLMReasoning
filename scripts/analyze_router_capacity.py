@@ -38,7 +38,7 @@ for q, mm in byq.items():
     Q.append(nt["question"]); OUR.append(1 if (int(v[1]) and not int(v[0])) else 0)
     HIS.append(1 if nt.get("his_label") == "think" else 0)
 OUR = np.array(OUR); HIS = np.array(HIS)
-print(f"Mohseni N={len(Q)} | our think {OUR.mean()*100:.0f}% | his think {HIS.mean()*100:.0f}%")
+print(f"Mohseni N={len(Q)} | our think {OUR.mean()*100:.0f}% | published think {HIS.mean()*100:.0f}%")
 
 from sentence_transformers import SentenceTransformer
 feats = {}

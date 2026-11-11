@@ -1,10 +1,10 @@
-"""Figure 2.2 -- how the energy-adjusted accuracy metric is constructed.
+"""How the energy-adjusted accuracy (EAA) metric is constructed.
 
 Draws, from the real paired OptimalThinkingBench run: a policy's operating points, the
 best-feasible envelope EAA integrates, the fixed budget range every policy is scored over, and
 EAA itself as the mean height of that envelope.
 
-    python scripts/fig_eaa.py     ->  thesis/Images/eaa_metric.png
+    python scripts/fig_eaa.py     ->  figures/eaa_metric.png   (set FIG_DIR to change)
 """
 import json
 import os
@@ -22,7 +22,8 @@ plt.rcParams.update({"font.size": 8.5, "axes.edgecolor": GRID, "axes.linewidth":
                      "figure.facecolor": SURF, "axes.facecolor": SURF,
                      "font.family": "DejaVu Sans"})
 
-OUT = os.path.join("thesis", "Images", "eaa_metric.png")
+OUT = os.path.join(os.environ.get("FIG_DIR", "figures"), "eaa_metric.png")
+os.makedirs(os.path.dirname(OUT), exist_ok=True)
 
 # ------------------------------------------------------------------ data
 paired = json.load(open("results/paired/paired_oracle_final.json"))

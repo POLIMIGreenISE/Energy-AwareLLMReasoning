@@ -1,7 +1,9 @@
-"""Chapter 3 figures: the measured J(L) curve, and its transfer to a second accelerator.
+"""Energy-curve figures: the measured J(L) curve, and its transfer to a second GPU.
 
-    python scripts/fig_ch3.py   ->  thesis/Images/jl_curve.png
-                                    thesis/Images/cross_gpu.png
+    python scripts/fig_energy_curves.py   ->  figures/jl_curve.png
+                                            figures/cross_gpu.png
+
+Set FIG_DIR to write the figures somewhere else.
 """
 import json
 import os
@@ -12,6 +14,9 @@ import numpy as np
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
+
+FIG_DIR = os.environ.get("FIG_DIR", "figures")
+os.makedirs(FIG_DIR, exist_ok=True)
 
 INK, MUTED, GRID, SURF = "#0b0b0b", "#52514e", "#d8d8d4", "#ffffff"
 TEAL, OCHRE = "#0b8f86", "#b0591a"          # validated CVD-safe pair
@@ -42,14 +47,14 @@ def style(ax, title, ylab, last=False):
     ax.set_xscale("log", base=2)
     ax.set_xticks([1, 2, 4, 8, 16, 32, 64])
     ax.set_xticklabels([1, 2, 4, 8, 16, 32, 64])
-    ax.set_xlabel("in-service concurrency")
+    ax.set_xlabel("batch size $L$")
     ax.grid(True, axis="y", color=GRID, lw=.6, alpha=.8)
     ax.set_axisbelow(True)
     for s in ("top", "right"):
         ax.spines[s].set_visible(False)
 
 
-# ============================================================ figure 3.1: the curve
+# ============================================================ figure: the curve
 b, j256 = curve(A100, "energy_per_out_token_j", 256)
 _, j1024 = curve(A100, "energy_per_out_token_j", 1024)
 _, pw = curve(A100, "power_w")
@@ -83,10 +88,10 @@ style(ax, "Aggregate throughput", "tokens/s")
 ax.annotate("48x", xy=(8, 260), color=INK, fontsize=9, fontweight="bold", ha="center")
 
 fig.tight_layout(pad=0.6, w_pad=1.6)
-fig.savefig("thesis/Images/jl_curve.png", dpi=300, facecolor=SURF)
-print("wrote thesis/Images/jl_curve.png")
+fig.savefig(os.path.join(FIG_DIR, "jl_curve.png"), dpi=300, facecolor=SURF)
+print("wrote", os.path.join(FIG_DIR, "jl_curve.png"))
 
-# ============================================================ figure 3.2: cross-GPU
+# ============================================================ figure: cross-GPU
 _, a_j = curve(A100, "energy_per_out_token_j")
 _, l_j = curve(L4, "energy_per_out_token_j", 256)
 _, a_p = curve(A100, "power_w")
@@ -120,5 +125,5 @@ ax.set_yticks([0, 100, 200, 300])
 style(ax, "GPU power", "watts")
 
 fig.tight_layout(pad=0.6, w_pad=1.6)
-fig.savefig("thesis/Images/cross_gpu.png", dpi=300, facecolor=SURF)
-print("wrote thesis/Images/cross_gpu.png")
+fig.savefig(os.path.join(FIG_DIR, "cross_gpu.png"), dpi=300, facecolor=SURF)
+print("wrote", os.path.join(FIG_DIR, "cross_gpu.png"))

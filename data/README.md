@@ -17,7 +17,7 @@ python scripts/fetch_data.py otb       # fetch one source
 The generation step is the only part of the work that reads these corpora, and its output is
 committed. Model generations, judge decisions and oracle labels live under `results/paired/` and
 `results/crossdataset/`, so the routers, the serving simulations and all twelve figures rebuild
-from `results/` alone, with no GPU and no downloads. See Appendix B of the thesis.
+from `results/` alone, with no GPU and no downloads.
 
 Fetch these only to repeat the generation step itself, or to re-run the two experiments that read
 the production arrival traces (`scripts/e11_real_trace.py`, `scripts/e11_addendum.py`).
@@ -38,7 +38,7 @@ rather than committed.
 ## A note on the Azure traces
 
 Only the **arrival timestamps** are read. The queries, their token counts and their correctness all
-come from the paired corpus, as the simulator section of the thesis states. The traces supply
+come from the paired corpus. The traces supply
 nothing but the shape of the arrival process, so a reproduction that cannot obtain them can still
 run every experiment that uses the synthetic arrival regimes.
 

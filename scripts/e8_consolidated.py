@@ -2,7 +2,7 @@
 broken down by CONCURRENCY REGIME.
 
 This experiment replaces the scattered E1/E3/E4 tables with one protocol, one results file and
-one figure set, per the 5 Aug supervisor direction ("stop exploring, converge"). Everything a
+one figure set, following the 5 Aug review ("stop exploring, converge"). Everything a
 reader needs to judge the claim is on the same page:
 
   * FOUR CONCURRENCY REGIMES as an explicit axis -- near-idle, moderate, saturated, and the

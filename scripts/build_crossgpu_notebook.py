@@ -1,8 +1,8 @@
 """Builds notebooks/12_cross_gpu_curve.ipynb (GPU) — E14.
 
-Answers the first question any examiner asks: **one GPU, one model — does any of this generalise?**
+Answers the first question anyone asks of this work: **one GPU, one model — does any of this generalise?**
 
-The thesis rests on J(L), the measured joules-per-output-token as a function of server concurrency,
+The analysis rests on J(L), the measured joules-per-output-token as a function of server concurrency,
 which falls 42x from batch 1 to 64 on an A100-SXM4-40GB. Every downstream claim uses that curve. If
 it is an A100 artefact, RQ4 is an A100 result.
 
@@ -24,7 +24,7 @@ This notebook re-runs the ORIGINAL concurrency protocol unchanged (l_in=64, l_ou
   3. whether the CONCLUSION transfers -- a reduced E8 comparison re-run on the new curve, to see
      whether load-aware still beats a static threshold on bursty traffic.
 
-Point 3 is the one that matters for the thesis. A shape that differs slightly but leaves the policy
+Point 3 is the one that matters most. A shape that differs slightly but leaves the policy
 ranking intact is a much weaker threat than one that flips it.
 
 **Best GPU to run this on: an L4.** It is the sharpest available test precisely because it is the
@@ -44,7 +44,7 @@ def code(s): cells.append({"cell_type": "code", "id": _cid(), "metadata": {}, "e
 
 md(r'''# E14 — does the energy curve transfer to another GPU?
 
-The thesis rests on **J(L)**, joules per output token as a function of concurrency, measured on an
+The analysis rests on **J(L)**, joules per output token as a function of concurrency, measured on an
 A100-SXM4-40GB as falling **42×** from batch 1 to batch 64. Everything downstream uses it.
 
 The policy does **not** need the absolute joules — only the shape:
@@ -66,7 +66,7 @@ artefact. An H100 is the useful opposite direction.
 
 md(r'''## 0. Repo setup''')
 code(r'''import os, subprocess, sys
-REPO, BRANCH = "cemalgndzz/llm-routing-tesina", "main"
+REPO, BRANCH = "POLIMIGreenISE/Energy-AwareLLMReasoning", "main"
 TOKEN = None
 try:
     from google.colab import userdata; TOKEN = userdata.get("GITHUB_TOKEN")
@@ -83,8 +83,8 @@ else:
     subprocess.run(["git", "-C", repo_dir, "pull", "--ff-only"], check=True)
 os.chdir(repo_dir)
 subprocess.run(["git", "remote", "set-url", "origin", auth], check=True)
-subprocess.run(["git", "config", "user.name", "cemalgndzz"], check=True)
-subprocess.run(["git", "config", "user.email", "cgogit@gmail.com"], check=True)
+subprocess.run(["git", "config", "user.name", "your-name"], check=True)
+subprocess.run(["git", "config", "user.email", "you@example.com"], check=True)
 if os.getcwd() not in sys.path: sys.path.insert(0, os.getcwd())
 os.makedirs("results/batching", exist_ok=True)
 print("cwd:", os.getcwd())''')

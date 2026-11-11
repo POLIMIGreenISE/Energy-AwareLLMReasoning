@@ -3,8 +3,8 @@ router's DECISIONS agree with Mohseni's independently-built routing labels?
 
 We train the LogReg+MiniLM router on ALL of OTB (paired_oracle_final.json), then
 predict think/no_think on Mohseni's held-out test prompts (data/mohseni/test.parquet)
-and compare to his `label`. This is a decision-AGREEMENT test, not an accuracy test:
-his labels use a different definition (his models, token/reward-based, not our
+and compare to the dataset `label`. This is a decision-AGREEMENT test, not an accuracy test:
+those labels use a different definition (other models, token/reward-based, not our
 energy-aware Qwen3-8B), so agreement is a directional generalization signal, not
 ground truth. Reported overall and per source (math sources should align more,
 since OTB's hard half is math-heavy; chat sources are the true out-of-distribution).
@@ -55,7 +55,7 @@ def report_block(mask, name):
     # decision agreement at the router's default 0.5 and at the OTB-tuned operating threshold
     acc50 = ((pp >= 0.5).astype(int) == yy).mean()
     bal = balanced_accuracy_score(yy, (pp >= 0.5).astype(int))
-    return f"{name:20} n={mask.sum():4}  AUC {auc:.3f}  agree@0.5 {acc50:.3f}  balanced {bal:.3f}  (his think% {yy.mean()*100:.0f})"
+    return f"{name:20} n={mask.sum():4}  AUC {auc:.3f}  agree@0.5 {acc50:.3f}  balanced {bal:.3f}  (Mohseni think% {yy.mean()*100:.0f})"
 
 allm = np.ones(N, bool)
 print("\n--- decision agreement (our OTB router vs Mohseni labels) ---")
@@ -77,10 +77,10 @@ print("(AUC is the calibration-free signal; agree@0.5 depends on OTB's 88% no_th
 with open(f"{OUT}/mohseni_agreement.md", "w", encoding="utf-8") as f:
     f.write("# Cross-dataset generalization: OTB router vs Mohseni labels (decision agreement)\n\n")
     f.write(f"OTB router (LogReg+MiniLM, trained on all {len(otb)} OTB queries) predicting on "
-            f"Mohseni's {N} held-out test prompts. His labels use a DIFFERENT definition "
-            "(his models, not our energy-aware Qwen3-8B), so this is decision AGREEMENT, "
+            f"Mohseni's {N} held-out test prompts. Its labels use a DIFFERENT definition "
+            "(other models, not our energy-aware Qwen3-8B), so this is decision AGREEMENT, "
             "a directional generalization signal -- not accuracy.\n\n")
-    f.write("|subset|n|AUC|agree@0.5|balanced acc|his think%|\n|--|--|--|--|--|--|\n")
+    f.write("|subset|n|AUC|agree@0.5|balanced acc|Mohseni think%|\n|--|--|--|--|--|--|\n")
     def row(mask, name):
         yy, pp = y_moh[mask], p_think[mask]
         if len(set(yy)) < 2: return f"|{name}|{mask.sum()}|--|--|--|{yy.mean()*100:.0f}|\n"
@@ -94,7 +94,7 @@ with open(f"{OUT}/mohseni_agreement.md", "w", encoding="utf-8") as f:
         f.write(row(np.array([s == src for s in sources]), src))
     f.write(f"\nOverall AUC {auc_all:.3f}; best threshold-swept agreement {best_acc:.3f} @ tau={best_tau:.2f}.\n")
     f.write("\n**Reading:** AUC is the calibration-free signal (does our router RANK Mohseni's "
-            "think-queries above his no_think ones?). agree@0.5 also depends on our OTB prior "
+            "think-queries above its no_think ones?). agree@0.5 also depends on our OTB prior "
             "(88% no_think) transferring, which mismatches Mohseni's balanced 50/50 mix -- so the "
             "threshold-swept best agreement is the fairer point estimate of the transferable signal.\n")
 print(f"\nwrote {OUT}/mohseni_agreement.md")

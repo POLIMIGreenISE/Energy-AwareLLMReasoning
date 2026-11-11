@@ -93,7 +93,7 @@ for name, s in ROUTERS.items():
 
 his = np.array([1 if data[q]["his"] == "think" else 0 for q in common])
 agree = (y == his).mean()
-print(f"\nour energy-aware oracle vs Mohseni's labels: agreement {agree:.3f} (our think% {y.mean()*100:.0f}, his {his.mean()*100:.0f})")
+print(f"\nour energy-aware oracle vs Mohseni's labels: agreement {agree:.3f} (our think% {y.mean()*100:.0f}, Mohseni {his.mean()*100:.0f})")
 src_lines = []
 for src in sorted(set(data[q]["source"] for q in common)):
     m = np.array([data[q]["source"] == src for q in common])
@@ -110,7 +110,7 @@ with open(f"{OUT}/eval_mohseni.md", "w", encoding="utf-8") as f:
     for name, (auc, e, pct) in rt.items():
         f.write(f"|{name}|{auc:.3f}|{e:.4f}|{pct:.0f}%|{pct-random_pct:+.0f}pp|\n")
     f.write(f"\nOur energy-aware oracle vs Mohseni's own labels: **agreement {agree:.3f}** "
-            f"(our think {y.mean()*100:.0f}% vs his 50%). By source:\n\n")
+            f"(our think {y.mean()*100:.0f}% vs Mohseni's 50%). By source:\n\n")
     for l in src_lines:
         f.write(f"- {l}\n")
 print(f"\nwrote {OUT}/eval_mohseni.md")

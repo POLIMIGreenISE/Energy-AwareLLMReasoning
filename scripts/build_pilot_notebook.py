@@ -45,7 +45,7 @@ This pilot answers three plumbing questions and produces three numbers:
 md(r'''## 0. Colab + GitHub setup (run first when on Colab)
 
 Open this straight from the private repo:
-`https://colab.research.google.com/github/cemalgndzz/llm-routing-tesina/blob/main/notebooks/00_pilot_energy_measurement.ipynb`
+`https://colab.research.google.com/github/POLIMIGreenISE/Energy-AwareLLMReasoning/blob/main/notebooks/00_pilot_energy_measurement.ipynb`
 (Colab will ask you to authorize GitHub and to *include private repos*.)
 
 **Save notebook edits back to GitHub:** use **File → Save a copy in GitHub** in
@@ -59,7 +59,7 @@ secret**, name `GITHUB_TOKEN`, value = a fine-grained PAT with *Contents: Read
 and write* on this repo, and toggle **Notebook access** on.''')
 code(r'''import os, subprocess
 
-REPO   = "cemalgndzz/llm-routing-tesina"
+REPO   = "POLIMIGreenISE/Energy-AwareLLMReasoning"
 BRANCH = "main"
 
 TOKEN = None
@@ -78,8 +78,8 @@ if TOKEN:
         subprocess.run(["git", "-C", repo_dir, "pull", "--ff-only"], check=True)
     os.chdir(repo_dir)
     subprocess.run(["git", "remote", "set-url", "origin", auth_url], check=True)
-    subprocess.run(["git", "config", "user.name", "cemalgndzz"], check=True)
-    subprocess.run(["git", "config", "user.email", "cgogit@gmail.com"], check=True)
+    subprocess.run(["git", "config", "user.name", "your-name"], check=True)
+    subprocess.run(["git", "config", "user.email", "you@example.com"], check=True)
     print("Repo ready. Working dir:", os.getcwd())
 else:
     print("No token -> running standalone (notebook still works; it pulls data/model from HF).")''')
@@ -291,7 +291,7 @@ avoid lazy-init skew.
 
 > **Attribution caveat:** this is the controlled low-concurrency setting. Energy
 > attribution under real *batched* serving is a separate (harder) question we
-> handle in a later phase — see CLAUDE.md §4.5.''')
+> handle in a later phase.''')
 code(r'''import time, threading
 
 zeus_ok = False
@@ -507,7 +507,7 @@ md(r'''## 11. Notes, caveats & next steps
 **Known pilot limitations (handled in later phases)**
 - Open-ended-long answers are unscored → add an LLM/reward-model judge (Phase 1).
 - Math subsets are excluded from the HF release → add via the OTB `prepare` workflow.
-- Per-query energy here is **low-concurrency**; batched-serving attribution is a separate study (CLAUDE.md §4.5).
+- Per-query energy here is **low-concurrency**; batched-serving attribution is a separate study.
 - Optional cross-check: wrap the loop in CodeCarbon (`pip install codecarbon`) and compare total kWh to `df["energy_wh"].sum()`.
 
 **What to report back from this pilot**

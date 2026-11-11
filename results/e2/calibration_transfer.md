@@ -3,7 +3,7 @@
 > **SUPERSEDED (2026-09-15).** Not reproducible: the script was never committed and the "steady" /
 > "heavy" regimes were not recorded. The budget below is mislabelled; the code defines it as
 > never + 35% of (always − never). Use `results/e2/TRANSFER_TOKENS.md` (`scripts/e2_transfer_tokens.py`),
-> which the thesis now cites. See `results/CORRECTIONS.md` §8a.
+> which replaces this file. See `results/CORRECTIONS.md` §8a.
 
 *(2026-08-05. This is the strongest form of the E2 result and supersedes the earlier
 "−45% to +117%" framing, which invited the rebuttal "so just calibrate it properly".)*

@@ -3,7 +3,7 @@
 E8b (results/e8/CONSOLIDATED.md section 2) showed that on the synthetic bursty regime the deployable
 load-aware rule's lead over a static threshold disappears at a p95 target of six times the
 never-reasoning p95 and reverses below it. E11 (results/e11/REAL_TRACE.md) found the arrival shape the
-rule needs in real code-completion traffic, which is interactive. The thesis leaves the combination
+rule needs in real code-completion traffic, which is interactive. That left the combination
 open: does the gain on real code-completion arrivals survive a latency target?
 
 Protocol: E11 exactly (same traces, same 12 evaluation windows x 500 queries, same parameter grids,

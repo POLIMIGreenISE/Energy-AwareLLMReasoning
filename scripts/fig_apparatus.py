@@ -1,10 +1,10 @@
-"""Figure 2.1 -- the experimental apparatus.
+"""The experimental apparatus.
 
 A block diagram separating what is measured on hardware from what is simulated over those
 measurements, and showing where the live-replay validation closes the loop. House style matches
-the other figures in thesis/Images (see scripts/e11_real_trace.py).
+the other figures (see scripts/e11_real_trace.py).
 
-    python scripts/fig_apparatus.py     ->  thesis/Images/apparatus.png
+    python scripts/fig_apparatus.py     ->  figures/apparatus.png   (set FIG_DIR to change)
 """
 import os
 
@@ -20,7 +20,8 @@ MEASURED_EDGE = "#9aa8a5"
 plt.rcParams.update({"font.size": 9, "figure.facecolor": SURF, "axes.facecolor": SURF,
                      "font.family": "DejaVu Sans"})
 
-OUT = os.path.join("thesis", "Images", "apparatus.png")
+OUT = os.path.join(os.environ.get("FIG_DIR", "figures"), "apparatus.png")
+os.makedirs(os.path.dirname(OUT), exist_ok=True)
 TITLE_FS, BODY_FS = 8.2, 7.0
 
 fig, ax = plt.subplots(figsize=(7.2, 4.6))
@@ -71,10 +72,10 @@ box(60, 86, 34, 10, "Zeus / NVML",
     "board energy counter\n4 Hz metrics probe")
 arrow(39.4, 86, 42.6, 86)
 
-box(22, 67, 34, 13, "Concurrency sweep",
+box(22, 67, 34, 13, "Batch-size sweep",
     "$L = 1 \\dots 64$, six repetitions each\n$\\Rightarrow$   $J(L)$,  $P(L)$,  tokens/s")
 box(60, 67, 34, 13, "Paired generation",
-    "every query twice: think, no-think\n"
+    "every query twice: reasoning, direct\n"
     "judge $\\kappa = 0.824$  $\\Rightarrow$  $\\Delta$tok$(q)$, correctness")
 arrow(22, 80.6, 22, 74.2)
 arrow(60, 80.6, 60, 74.2)
@@ -84,12 +85,12 @@ arrow(22, 60.2, 33, 50.4, rad=0.05)
 arrow(60, 60.2, 49, 50.4, rad=-0.05)
 
 box(41, 43, 68, 13, "Event-driven serving simulator",
-    "arrivals, queue and in-service concurrency only;\n"
-    "per-token energy, power and decode rate are looked up, never modelled")
+    "arrivals, queue and batch size only;\n"
+    "per-token energy, power and decode rate are looked up, never modeled")
 arrow(41, 36.2, 41, 29.0)
 
 box(41, 22, 76, 13, "Policy comparison at matched energy",
-    "random-routing floor  ·  paired bootstrap intervals  ·  price-mapped grids\n"
+    "random-selection control  ·  paired bootstrap intervals  ·  shared score grids\n"
     "identical arrival times and identical queries for every policy")
 arrow(41, 15.4, 41, 9.0)
 

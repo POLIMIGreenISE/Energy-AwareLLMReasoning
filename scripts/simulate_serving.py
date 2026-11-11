@@ -311,7 +311,7 @@ with open(f"{OUT}/sim_serving.md", "w", encoding="utf-8") as f:
             "So load-awareness cannot route *better queries* to thinking; its only lever is spending "
             "the energy budget on CHEAP (high-load) thinking opportunities and skipping EXPENSIVE "
             "(low-load) ones. That lever only exists when the load actually varies -- hence the "
-            "conditionality. The honest thesis claim is therefore not 'load-aware routing is a free "
+            "conditionality. The defensible claim is therefore not 'load-aware routing is a free "
             "accuracy boost' but 'it provides robustness to load VARIATION and mis-calibration: under "
             "bursty load it dominates any fixed threshold, and it never underperforms a well-tuned "
             "static one'.\n\n")

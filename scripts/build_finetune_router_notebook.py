@@ -40,13 +40,13 @@ probe we tried) — a signal a frozen linear head only partly exploits.
 Trains **three** variants for comparison:
 - `answerdotai/ModernBERT-base` (150M, fresh) — the vLLM Semantic Router's choice.
 - `jhu-clsp/mmBERT-small` (140M, fresh) — the architecture Mohseni used.
-- `AmirMohseni/reasoning-router-mmbert-small` (140M, **warm start**) — his own
-  checkpoint, already fine-tuned on his released 70k-label dataset. Verified
+- `AmirMohseni/reasoning-router-mmbert-small` (140M, **warm start**) — Mohseni's own
+  checkpoint, already fine-tuned on the released 70k-label dataset. Verified
   safe to warm-start from: its config confirms `id2label={0:"no_think",
   1:"think"}` — an exact match to our own convention, `ModernBertForSequence
   Classification` architecture, loads cleanly via `AutoModelForSequenceClassification`
   with both the encoder AND the classification head restored. Tests whether
-  pretraining on his larger (if token-labeled, not energy-aware) dataset gives
+  pretraining on Mohseni's larger (if token-labeled, not energy-aware) dataset gives
   a head start over training from scratch on just our 1,710 examples.
 
 Same 5-fold out-of-fold protocol as the existing router (StratifiedKFold,
@@ -62,7 +62,7 @@ this notebook gets the real number instead of an estimate.
 
 md(r'''## 0. Repo setup (Colab or vast.ai)''')
 code(r'''import os, subprocess, sys
-REPO, BRANCH = "cemalgndzz/llm-routing-tesina", "main"
+REPO, BRANCH = "POLIMIGreenISE/Energy-AwareLLMReasoning", "main"
 TOKEN = None
 try:
     from google.colab import userdata; TOKEN = userdata.get("GITHUB_TOKEN")
@@ -80,8 +80,8 @@ else:
     subprocess.run(["git", "-C", repo_dir, "pull", "--ff-only"], check=True)
 os.chdir(repo_dir)
 subprocess.run(["git", "remote", "set-url", "origin", auth], check=True)
-subprocess.run(["git", "config", "user.name", "cemalgndzz"], check=True)
-subprocess.run(["git", "config", "user.email", "cgogit@gmail.com"], check=True)
+subprocess.run(["git", "config", "user.name", "your-name"], check=True)
+subprocess.run(["git", "config", "user.email", "you@example.com"], check=True)
 if os.getcwd() not in sys.path:
     sys.path.insert(0, os.getcwd())
 print("cwd:", os.getcwd())''')

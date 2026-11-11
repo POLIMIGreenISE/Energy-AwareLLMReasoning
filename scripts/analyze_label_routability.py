@@ -1,11 +1,11 @@
-"""Is Mohseni's data unroutable, or is OUR label just a harder target than HIS?
+"""Is Mohseni's data unroutable, or is OUR label just a harder target than the published one?
 
 Same Mohseni text, same features (MiniLM), same CV. Predict three different labels:
   - OUR energy-aware oracle : think iff (think-correct AND no-think-wrong)   [does thinking FLIP it]
-  - Mohseni's published label: his_label field from his dataset             [his think/no_think]
-  - a pure DIFFICULTY label  : think iff (no-think is wrong)  == his math rule incl. both-wrong->think
-If his-label / difficulty AUC >> our-oracle AUC (~0.55), the gap is the LABEL DEFINITION, not our
-method: his target ~ "is this hard" (text-predictable); ours ~ "does thinking help" (model-behavioral).
+  - Mohseni's published label: the his_label field of the dataset          [published think/no_think]
+  - a pure DIFFICULTY label  : think iff (no-think is wrong)  == Mohseni's math rule incl. both-wrong->think
+If published-label / difficulty AUC >> our-oracle AUC (~0.55), the gap is the LABEL DEFINITION, not our
+method: the published target ~ "is this hard" (text-predictable); ours ~ "does thinking help" (model-behavioral).
 Free/local.
 """
 import json, os, sys
@@ -32,12 +32,12 @@ for q, mm in byq.items():
     cn, ct = int(v[0]), int(v[1])
     Q.append(nt["question"]); SRC.append(nt.get("source") or "?")
     OUR.append(1 if (ct and not cn) else 0)                 # ours: thinking flips wrong->right
-    DIFF.append(1 if (cn == 0) else 0)                      # difficulty: no-think is wrong (= his math rule)
-    HIS.append(1 if nt.get("his_label") == "think" else 0)  # his published label
+    DIFF.append(1 if (cn == 0) else 0)                      # difficulty: no-think is wrong (= Mohseni's math rule)
+    HIS.append(1 if nt.get("his_label") == "think" else 0)  # Mohseni's published label
 Q = np.array(Q, dtype=object); SRC = np.array(SRC)
 OUR = np.array(OUR); HIS = np.array(HIS); DIFF = np.array(DIFF)
-print(f"Mohseni N={len(Q)} | think-rate  ours {OUR.mean()*100:.0f}%  his {HIS.mean()*100:.0f}%  difficulty {DIFF.mean()*100:.0f}%")
-print(f"our-vs-his agreement {np.mean(OUR==HIS)*100:.0f}% | our-vs-difficulty {np.mean(OUR==DIFF)*100:.0f}% | his-vs-difficulty {np.mean(HIS==DIFF)*100:.0f}%")
+print(f"Mohseni N={len(Q)} | think-rate  ours {OUR.mean()*100:.0f}%  published {HIS.mean()*100:.0f}%  difficulty {DIFF.mean()*100:.0f}%")
+print(f"our-vs-published agreement {np.mean(OUR==HIS)*100:.0f}% | our-vs-difficulty {np.mean(OUR==DIFF)*100:.0f}% | published-vs-difficulty {np.mean(HIS==DIFF)*100:.0f}%")
 
 from sentence_transformers import SentenceTransformer
 X = SentenceTransformer("all-MiniLM-L6-v2").encode(list(Q), batch_size=64, normalize_embeddings=True).astype(np.float32)
@@ -53,11 +53,11 @@ def cv_auc(y, mask=None):
 
 print("\n=== Can a text router predict each label? (5-fold CV AUC, all of Mohseni) ===")
 print(f"  OUR energy-aware oracle (does thinking FLIP it) : AUC {cv_auc(OUR):.3f}")
-print(f"  Mohseni's published label (his think/no_think)  : AUC {cv_auc(HIS):.3f}")
+print(f"  Mohseni's published label (think/no_think)  : AUC {cv_auc(HIS):.3f}")
 print(f"  pure DIFFICULTY (is no-think wrong)             : AUC {cv_auc(DIFF):.3f}")
 
 print("\n=== Per source: think-rate and text-predictability of EACH label ===")
-print(f"  {'source':20} {'n':>4} | {'our%':>5} {'his%':>5} {'diff%':>5} | {'ourAUC':>6} {'hisAUC':>6} {'diffAUC':>7}")
+print(f"  {'source':20} {'n':>4} | {'our%':>5} {'pub%':>5} {'diff%':>5} | {'ourAUC':>6} {'pubAUC':>6} {'diffAUC':>7}")
 for s in sorted(set(SRC)):
     m = SRC == s
     if m.sum() < 30: continue

@@ -2,7 +2,7 @@
 
 `scripts/e8_consolidated.py` takes ~40 minutes because it re-runs the whole sweep. Figures 2-4 are
 just views of `results/e8/e8_rows.json`, so a caption or label fix should not cost a sweep. This
-redraws them from the committed numbers, which also makes the point that every figure in the thesis
+redraws them from the committed numbers, which also makes the point that every figure
 is reproducible from data in the repository.
 
 (fig1, the frontiers, needs the full parameter sweep and is still produced by the main script.)

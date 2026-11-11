@@ -2,7 +2,7 @@
 
 E8d (results/e8/CONSOLIDATED.md section 3) separated the load-aware rule's two ingredients, live load
 and per-query token cost, only at the 25% and 40% caps. The near-idle regime is where the deployable
-rule wins at the two LOOSER caps (55%, 70%), so the thesis's statement that "wherever the two
+rule wins at the two LOOSER caps (55%, 70%), so the earlier statement that "wherever the two
 ingredients were separated, the accuracy came from token cost" leaves exactly that case untested.
 This runs the same decomposition at all four caps.
 

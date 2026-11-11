@@ -1,32 +1,3 @@
-# --- Internal working context (DO NOT publish) ---
-CLAUDE.md
-
-.claude/
-
-# --- Not ours to publish ---
-# Copyrighted PDFs of the cited literature; cite them, do not redistribute them.
-papers/
-# A reference thesis used while drafting, and the PoliMi template boilerplate.
-example_thesis/
-Polimi computer science thesis template/
-Polimi_Thesis_in_Computer_Science_and_Engineering.zip
-
-# --- Internal planning notes, not source code ---
-reports/
-
-# --- Data, results, model caches (large / regenerable) ---
-outputs/
-checkpoints/
-wandb/
-.cache/
-hf_cache/
-models/
-
-# --- Secrets ---
-.env
-.env.*
-*.key
-
 # --- Python ---
 __pycache__/
 *.py[cod]
@@ -38,24 +9,32 @@ dist/
 venv/
 env/
 .ipynb_checkpoints/
-
-# --- Notebooks: keep .ipynb tracked, ignore heavy outputs dir if used ---
 notebooks/scratch/
 
-# --- OS / editor ---
+# --- Secrets ---
+.env
+.env.*
+*.key
+
+# --- Model and run caches (large, regenerable) ---
+outputs/
+checkpoints/
+wandb/
+.cache/
+hf_cache/
+models/
+
+# --- OS and editors ---
 .DS_Store
 Thumbs.db
+desktop.ini
 .vscode/
 .idea/
 
-# Third-party corpora and traces: not redistributed here.
-# scripts/fetch_data.py retrieves each from its own release. See data/README.md.
+# --- Third-party corpora and traces ---
+# Not redistributed. scripts/fetch_data.py retrieves each from its own release; see data/README.md.
 data/*
 !data/README.md
 
-# NOTE: results/*/server*.log are deliberately TRACKED. Appendix B of the thesis states that
-# the vLLM version and the launch arguments of every reported run are recoverable from them,
-# so they are evidence, not incidental logs. Do not add them here.
-
-# Overleaf upload bundle (regenerate from thesis/ any time)
-thesis-skeleton.zip
+# results/*/server*.log are tracked on purpose: they record the vLLM version and the launch
+# arguments of every reported serving run.

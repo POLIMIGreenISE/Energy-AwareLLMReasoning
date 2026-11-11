@@ -1,6 +1,6 @@
 """E2 rebuilt -- can an energy budget be held when the controller does not know each query's token cost?
 
-WHY A REBUILD. The thesis table tab:calibration-transfer (results/e2/calibration_transfer.md, log
+WHY A REBUILD. The earlier calibration-transfer table (results/e2/calibration_transfer.md, log
 results/e2xfer.log) was produced by a script that was never committed, on "steady" and "heavy" regimes
 whose parameters were not recorded. Its budget is also mislabelled there: the E2 code defines it as
 never + 0.35 x (always - never), not as 35% of always-reasoning energy (e2spec.log is only consistent
@@ -9,7 +9,7 @@ says nothing about the deployable rule, which must estimate it.
 
 WHAT THIS DOES. E2's open-loop procedure (scripts/e2_token_proxy_controller.py, plan_lambda) rebuilt in
 the shared simulator (src/serving_sim.py) on the four documented E8 regimes, so it is reproducible and
-consistent with the rest of Chapter 5:
+consistent with the other budget experiments:
   * budget  B = never + f x (always - never), f in {0.35, 0.60}; anchors are means over the 20 E8
     evaluation traces;
   * plan    lambda by bisection on the 5 E8 historical traces (seeds 100-104). A fixed-price controller

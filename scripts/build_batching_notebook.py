@@ -17,7 +17,7 @@ md(r'''# Phase-1 — Does the token→energy proxy break under batched serving?
 
 **Why.** The pilot found energy ∝ output tokens with **R² = 0.9999 at batch = 1**
 (GPU pinned at ~297 W, ~81 tok/s → a flat ~3.7 J/token). That means the
-"tokens ≠ energy" divergence the thesis is about **cannot** come from single-query
+"tokens ≠ energy" divergence this work is about **cannot** come from single-query
 decode — it must come from the regimes that break the constant-power /
 constant-throughput assumption. This notebook measures two of them, on a fixed
 model (Qwen3-8B), holding everything else constant:
@@ -45,7 +45,7 @@ Same as the pilot: open from the private repo, **File → Save a copy in GitHub*
 save the notebook, and the cell below clones the repo (needs the `GITHUB_TOKEN`
 Colab secret) so results land in `results/`.''')
 code(r'''import os, subprocess
-REPO, BRANCH = "cemalgndzz/llm-routing-tesina", "main"
+REPO, BRANCH = "POLIMIGreenISE/Energy-AwareLLMReasoning", "main"
 TOKEN = None
 try:
     from google.colab import userdata
@@ -61,8 +61,8 @@ if TOKEN:
         subprocess.run(["git", "-C", repo_dir, "pull", "--ff-only"], check=True)
     os.chdir(repo_dir)
     subprocess.run(["git", "remote", "set-url", "origin", auth], check=True)
-    subprocess.run(["git", "config", "user.name", "cemalgndzz"], check=True)
-    subprocess.run(["git", "config", "user.email", "cgogit@gmail.com"], check=True)
+    subprocess.run(["git", "config", "user.name", "your-name"], check=True)
+    subprocess.run(["git", "config", "user.email", "you@example.com"], check=True)
     print("Repo ready:", os.getcwd())
 else:
     print("No token -> running standalone.")''')
@@ -289,11 +289,11 @@ md(r'''## 8. Reading the result
   policy calibrated on batch=1 tokens would misjudge the real trade-off. Report the
   batch=1 ÷ batch=max ratio as the headline "how wrong is the proxy" number.
 - **No divergence:** if the curves are flat, that's still a finding — the token proxy
-  is robust to batching on this GPU. (Either way it answers the thesis question.)
+  is robust to batching on this GPU. (Either way it answers the question.)
 - **Prefill (Exp B):** rising J/output-token with input length shows output-token
   counting misses prefill energy — long-context queries break the proxy differently.
 
-**Caveats to state in the thesis:** energy is at batch granularity (per-query is an
+**Caveats:** energy is at batch granularity (per-query is an
 amortization); vLLM continuous batching means "batch size" = offered concurrency;
 numbers are A100-specific. Next: repeat the A-sweep with *mixed* think/no-think
 workloads (realistic serving) and feed measured per-query energy back into the

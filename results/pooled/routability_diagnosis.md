@@ -52,9 +52,9 @@ it is every source. The real mechanism is the **topic=label shortcut**:
 reasoning" with "hard-math topic"). On realistic mixed traffic that conflation breaks and text routing
 collapses to ~0.55 AUC regardless of training data.
 
-## Answer 3 — but Mohseni's published router "works" on his data. How? (metric, not skill)
+## Answer 3 — but Mohseni's published router "works" on its own data. How? (metric, not skill)
 
-`scripts/test_his_label_routability.py`. Same Mohseni text, predict three labels via 5-fold CV:
+`scripts/analyze_label_routability.py`. Same Mohseni text, predict three labels via 5-fold CV:
 
 | Label predicted | CV AUC on Mohseni |
 |--|--|
@@ -62,19 +62,18 @@ collapses to ~0.55 AUC regardless of training data.
 | **Mohseni's OWN published labels** | **0.563** |
 | Pure difficulty (no-think is wrong) | 0.620 |
 
-His own labels are **also near-chance from text (0.563)** — even at chance on chat (Nectar 0.510,
-WildChat 0.498). So his data is unroutable per-query under HIS labels too; it is not our method.
-Why his blog looks like a win: he reports **downstream reward/accuracy at a think-rate with NO random
+Mohseni's own labels are **also near-chance from text (0.563)** — even at chance on chat (Nectar 0.510,
+WildChat 0.498). So the data is unroutable per-query under its own labels too; it is not our method.
+Why the published blog post looks like a win: it reports **downstream reward/accuracy at a think-rate with NO random
 baseline** (WildChat +1.37 reward @ 42.9% think — but thinking helps chat on average, so any 43%-think
-policy gains; AIME 0.1933 < 0.2400 full-think — his router is BELOW always-think). Report his metric and
-OUR router looks "good" too; report our metric (per-query AUC + random floor) and HIS router hits the
-same ~0.56 ceiling. **Takeaway: our random-floor + per-query-AUC evaluation is a methodological
-contribution that EXPOSES a routability ceiling the prior art's reward-only evaluation hides. Our results
-are more rigorous than the baseline, not fake.**
+policy gains; AIME 0.1933 < 0.2400 full-think — the published router is BELOW always-think). Report that metric and
+OUR router looks "good" too; report our metric (per-query AUC + random floor) and the published router hits the
+same ~0.56 ceiling. **Takeaway: the random-floor + per-query-AUC evaluation exposes a routability ceiling that a
+reward-only evaluation hides.**
 
 ## Answer 4 — "is the data unroutable, or is our ROUTER too weak?" (capacity sweep)
 
-`scripts/test_router_capacity_mohseni.py`. Threw 3 feature spaces × 5 classifiers at Mohseni (5-fold CV):
+`scripts/analyze_router_capacity.py`. Threw 3 feature spaces × 5 classifiers at Mohseni (5-fold CV):
 
 | features | LogReg | MLP | LinearSVC | HistGBM | RBF-SVM |
 |--|--|--|--|--|--|
@@ -84,7 +83,7 @@ are more rigorous than the baseline, not fake.**
 
 **BEST across all 13 combos = 0.568** (our labels); **0.589** for Mohseni's own labels. Rules out weak
 features (mpnet-768 + TF-IDF both fail), linear-only boundaries (MLP/HistGBM/RBF-SVM don't beat LogReg),
-and our label definition (his labels cap too). Same pipeline = 0.90 on OTB, 0.57 on Mohseni → a
+and our label definition (Mohseni's labels cap too). Same pipeline = 0.90 on OTB, 0.57 on Mohseni → a
 **mutual-information ceiling**: the text doesn't contain enough about "will thinking flip this model" for
 ANY architecture. Only untested escalation = end-to-end fine-tuned ModernBERT (low odds: it TIED LogReg on
 OTB 0.90 and transfer 0.52; would overfit ~1450 ex/fold). **Conclusion: the classifier is not the

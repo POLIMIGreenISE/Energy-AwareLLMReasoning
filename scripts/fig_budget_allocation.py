@@ -1,10 +1,13 @@
-"""Chapter 5 figures: holding a budget, where the load-aware rule pays, and which ingredient earns it.
+"""Budget-allocation figures: holding an energy budget, where the load-aware rule gains accuracy,
+and which ingredient the gain comes from.
 
-    python scripts/fig_ch5.py  ->  thesis/Images/e2_sweep.png
-                                   thesis/Images/e8_gap.png
-                                   thesis/Images/e8_decomp.png
-                                   thesis/Images/e8_slo.png
-                                   thesis/Images/e11_real.png
+    python scripts/fig_budget_allocation.py  ->  figures/e2_sweep.png
+                                                 figures/e8_gap.png
+                                                 figures/e8_decomp.png
+                                                 figures/e8_slo.png
+                                                 figures/e11_real.png
+
+Set FIG_DIR to write the figures somewhere else.
 """
 import os
 
@@ -12,6 +15,9 @@ import numpy as np
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
+
+FIG_DIR = os.environ.get("FIG_DIR", "figures")
+os.makedirs(FIG_DIR, exist_ok=True)
 
 INK, MUTED, GRID, SURF = "#0b0b0b", "#52514e", "#d8d8d4", "#ffffff"
 TEAL, OCHRE = "#0b8f86", "#b0591a"          # validated CVD-safe diverging pair
@@ -62,7 +68,7 @@ SWEEP_LOADAWARE = {rg: [next(x["vs_budget"] for x in _E2 if x["regime"] == rg an
 SERIES = {"moderate": ("#2a78d6", "o"), "near-idle": ("#eb6834", "s"),
           "bursty": ("#1baf7a", "^"), "saturated": ("#eda100", "D")}
 TOK_MARK = {"true": "o", "constant": "s", "estimated": "^"}
-# tab:jl-curve: the measured price at these concurrencies (0.134 J at 32 is plotted at 0.134).
+# the measured energy per token at these batch sizes (0.134 J at 32 is plotted at 0.134).
 CURVE_L = {1: 3.42, 2: 1.70, 4: 0.865, 8: 0.454, 16: 0.244, 32: 0.134}
 
 
@@ -111,7 +117,7 @@ ax.set_xlim(0.105, 3.9)
 ax.set_xticks(SWEEP_C)
 ax.set_xticklabels(["3.42", "2.40", "1.70", "1.20", "0.87", "0.60", "0.45", "0.24", "0.13"])
 ax.minorticks_off()
-ax.set_xlabel("fixed price assumed per token (J)")
+ax.set_xlabel("fixed energy cost assumed per token (J)")
 ax.set_ylabel("energy spent against budget (%)")
 ax.set_ylim(-62, 122)
 top = ax.secondary_xaxis("top")
@@ -119,7 +125,7 @@ top.set_xticks(list(CURVE_L.values()))
 top.set_xticklabels([str(k) for k in CURVE_L])
 top.xaxis.set_minor_locator(matplotlib.ticker.NullLocator())
 top.tick_params(colors=MUTED, labelsize=7)
-top.set_xlabel("concurrency at which the measured curve charges that price", color=MUTED, fontsize=7.5)
+top.set_xlabel("batch size at which the measured curve gives that energy", color=MUTED, fontsize=7.5)
 top.spines["top"].set_color(GRID)
 ax.legend(loc="upper right", frameon=False, fontsize=7.5, handlelength=2.2, borderaxespad=0.2)
 ax.grid(True, axis="y", color=GRID, lw=.6, alpha=.8)
@@ -150,8 +156,8 @@ for s in ("top", "right"):
     axr.spines[s].set_visible(False)
 axr.tick_params(axis="y", left=False)
 fig.subplots_adjust(left=0.085, right=0.985, bottom=0.14, top=0.80)
-fig.savefig("thesis/Images/e2_sweep.png", dpi=300, facecolor=SURF)
-print("wrote thesis/Images/e2_sweep.png")
+fig.savefig(os.path.join(FIG_DIR, "e2_sweep.png"), dpi=300, facecolor=SURF)
+print("wrote", os.path.join(FIG_DIR, "e2_sweep.png"))
 
 # ============================================================ figure: gap by regime
 fig, axes = plt.subplots(1, 4, figsize=(7.2, 2.9), sharey=True)
@@ -161,8 +167,8 @@ axes[0].set_ylabel("accuracy gap (pp)\nload-aware $-$ static")
 for ax in axes:
     ax.set_xlabel("energy cap")
 fig.tight_layout(pad=0.6, w_pad=1.0)
-fig.savefig("thesis/Images/e8_gap.png", dpi=300, facecolor=SURF)
-print("wrote thesis/Images/e8_gap.png")
+fig.savefig(os.path.join(FIG_DIR, "e8_gap.png"), dpi=300, facecolor=SURF)
+print("wrote", os.path.join(FIG_DIR, "e8_gap.png"))
 
 # ============================================================ figure: decomposition
 # MEASURED: results/e8/e8_decomp_caps.json (scripts/e8_decomp_caps.py) -- all four caps. Ingredient is
@@ -197,8 +203,8 @@ for ax in axes[:, 0]:
 handles, labels = axes[0][0].get_legend_handles_labels()
 fig.legend(handles, labels, loc="upper center", ncol=3, frameon=False, fontsize=8, bbox_to_anchor=(0.5, 1.0))
 fig.tight_layout(pad=0.6, w_pad=1.2, h_pad=1.4, rect=(0, 0, 1, 0.95))
-fig.savefig("thesis/Images/e8_decomp.png", dpi=300, facecolor=SURF)
-print("wrote thesis/Images/e8_decomp.png")
+fig.savefig(os.path.join(FIG_DIR, "e8_decomp.png"), dpi=300, facecolor=SURF)
+print("wrote", os.path.join(FIG_DIR, "e8_decomp.png"))
 
 # ============================================================ figure: the SLO reversal
 # MEASURED: results/e8/CONSOLIDATED.md section 2 -- energy cap held at 40%, a p95 target added
@@ -212,14 +218,14 @@ for ax, name in zip(axes, ["near-idle", "moderate", "saturated", "bursty"]):
     ax.set_xlabel("p95 target")
 axes[0].set_ylabel("accuracy gap (pp)\nload-aware $-$ static")
 fig.tight_layout(pad=0.6, w_pad=1.0)
-fig.savefig("thesis/Images/e8_slo.png", dpi=300, facecolor=SURF)
-print("wrote thesis/Images/e8_slo.png")
+fig.savefig(os.path.join(FIG_DIR, "e8_slo.png"), dpi=300, facecolor=SURF)
+print("wrote", os.path.join(FIG_DIR, "e8_slo.png"))
 
 # ============================================================ figure: production arrival traces
 # MEASURED: results/e11/REAL_TRACE.md section 2. Azure LLM Inference Traces (Nov 2023) supply the
 # arrival process only; token counts and correctness stay with the paired OTB measurements.
 # (title, subtitle, gaps). The two code panels are one trace under two rescalings, so they share a
-# title and the subtitle says which rescaling; that also keeps every title as short as Figure 5.1's.
+# title and the subtitle says which rescaling; that also keeps every title short.
 _R = _json.load(open("results/e11/e11_rows.json"))
 _E11 = [("Poisson @0.8 (control)",     "Poisson (control)", ""),
         ("Azure conv @0.8",            "Azure conv",        ""),
@@ -235,5 +241,5 @@ for ax, (title, sub, rows) in zip(axes, REAL):
     ax.set_xlabel("energy cap")
 axes[0].set_ylabel("accuracy gap (pp)\nload-aware $-$ static")
 fig.tight_layout(pad=0.6, w_pad=1.0)
-fig.savefig("thesis/Images/e11_real.png", dpi=300, facecolor=SURF)
-print("wrote thesis/Images/e11_real.png")
+fig.savefig(os.path.join(FIG_DIR, "e11_real.png"), dpi=300, facecolor=SURF)
+print("wrote", os.path.join(FIG_DIR, "e11_real.png"))

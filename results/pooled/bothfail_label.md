@@ -1,4 +1,4 @@
-# Vitali's proposal: label both-fail queries as `think`?
+# Labeling both-fail queries as `think`?
 
 A = energy-aware (ours, both-wrong -> no_think); B = difficulty (both-wrong -> think).
 

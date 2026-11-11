@@ -1,19 +1,24 @@
-"""Figures for the per-query chapter and the deployment chapter.
+"""Figures for per-query routing and for the live deployment.
 
-    python scripts/fig_ch6_ch8.py  ->  thesis/Images/asymmetry.png
-                                       thesis/Images/live_energy.png
-                                       thesis/Images/controller.png
+    python scripts/fig_routing_and_deployment.py  ->  figures/asymmetry.png
+                                                      figures/live_energy.png
+                                                      figures/controller.png
 
-Every number is loaded from the results files, never transcribed. Three Chapter 7 figures once
-carried hand-copied tables and went stale when the experiments were re-run; see fig_ch5.py.
+Every number is loaded from the results files, never transcribed. Three budget-allocation figures
+once carried hand-copied tables and went stale when the experiments were re-run; see
+fig_budget_allocation.py. Set FIG_DIR to write the figures somewhere else.
 """
 import json
+import os
 
 import numpy as np
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 from scipy.stats import spearmanr
+
+FIG_DIR = os.environ.get("FIG_DIR", "figures")
+os.makedirs(FIG_DIR, exist_ok=True)
 
 INK, MUTED, GRID, SURF = "#0b0b0b", "#52514e", "#d8d8d4", "#ffffff"
 TEAL, OCHRE = "#0b8f86", "#b0591a"
@@ -23,7 +28,7 @@ plt.rcParams.update({"font.size": 8, "axes.edgecolor": GRID, "axes.linewidth": .
                      "figure.facecolor": SURF, "axes.facecolor": SURF,
                      "font.family": "DejaVu Sans", "axes.titlesize": 8.5})
 
-J_PER_TOKEN = 3.7        # the batch-one constant of sec:paired; it cancels, see sec:simulator-limits
+J_PER_TOKEN = 3.7        # batch-one energy per token of the paired corpus; it cancels in the ratio
 
 
 def tidy(ax, grid_axis="y"):
@@ -33,7 +38,7 @@ def tidy(ax, grid_axis="y"):
         ax.spines[s].set_visible(False)
 
 
-# ==================================================================== 1. the asymmetry (Chapter 6)
+# ==================================================================== 1. the asymmetry (per-query routing)
 # MEASURED: results/crossdataset/official_router_eval.md -- energy-adjusted accuracy of each router
 # minus the random-routing floor on the realistic mixed corpus, bootstrap CI.
 ROUTERS = [
@@ -72,7 +77,7 @@ axL.axvline(0, color=MUTED, lw=1.0, zorder=2)
 axL.set_yticks(ys)
 axL.set_yticklabels([n for n, *_ in ROUTERS])
 axL.set_ylim(-.6, len(ROUTERS) - .4)
-axL.set_xlabel("energy-adjusted accuracy $-$ random floor")
+axL.set_xlabel("EAA gain over the random-selection control")
 axL.set_title("Which queries benefit: not predictable", color=INK, loc="left", pad=8)
 axL.text(0, 1.005, "every interval includes zero", transform=axL.transAxes,
          color=MUTED, fontsize=7, va="bottom")
@@ -94,11 +99,11 @@ axR.text(0, 1.005, r"$\rho$ = %.2f, %.0f%% inside the dashed factor-of-two band"
 tidy(axR, grid_axis="both")
 
 fig.tight_layout(pad=0.6, w_pad=1.6)
-fig.savefig("thesis/Images/asymmetry.png", dpi=300, facecolor=SURF)
-print("wrote thesis/Images/asymmetry.png")
+fig.savefig(os.path.join(FIG_DIR, "asymmetry.png"), dpi=300, facecolor=SURF)
+print("wrote", os.path.join(FIG_DIR, "asymmetry.png"))
 
 
-# ============================================================ 2. live energy bracket (Chapter 8)
+# ============================================================ 2. live energy bracket (live deployment)
 # MEASURED: results/livetest/sim_vs_live.jsonl. The simulator charges no idle power, so a correct
 # prediction must sit between the measured total and that total with idle draw removed.
 rows = [json.loads(l) for l in open("results/livetest/sim_vs_live.jsonl")]
@@ -125,11 +130,11 @@ ax.text(0, 1.005,
         transform=ax.transAxes, color=MUTED, fontsize=7, va="bottom")
 tidy(ax)
 fig.tight_layout(pad=0.6)
-fig.savefig("thesis/Images/live_energy.png", dpi=300, facecolor=SURF)
-print(f"wrote thesis/Images/live_energy.png  ({inside}/{len(rows)} inside)")
+fig.savefig(os.path.join(FIG_DIR, "live_energy.png"), dpi=300, facecolor=SURF)
+print(f"wrote {os.path.join(FIG_DIR, 'live_energy.png')}  ({inside}/{len(rows)} inside)")
 
 
-# ================================================================ 3. the controller (Chapter 8)
+# ================================================================ 3. the controller (live deployment)
 # MEASURED: results/repair/pacing_*.jsonl (notebooks/13_controller_repair.ipynb).
 def pacing(name):
     return [json.loads(l) for l in open(f"results/repair/pacing_{name}.jsonl")]
@@ -162,12 +167,12 @@ axR.axhline(BUDGET_WH, color=OCHRE, lw=1.0, zorder=2)
 axR.text(0.02, BUDGET_WH, "authorized budget", color=OCHRE, fontsize=7, va="bottom")
 axR.set_xlabel("fraction of requests completed")
 axR.set_ylabel("energy spent (Wh)")
-axR.set_title("Saturation: the bill arrives in the drain", color=INK, loc="left", pad=17)
+axR.set_title("Saturation: the energy arrives in the drain", color=INK, loc="left", pad=17)
 axR.text(0, 1.005, "four fifths of the energy lands after 58% of completions",
          transform=axR.transAxes, color=MUTED, fontsize=7, va="bottom")
 axR.legend(frameon=False, fontsize=7, loc="upper left")
 tidy(axR)
 
 fig.tight_layout(pad=0.6, w_pad=1.6)
-fig.savefig("thesis/Images/controller.png", dpi=300, facecolor=SURF)
-print("wrote thesis/Images/controller.png")
+fig.savefig(os.path.join(FIG_DIR, "controller.png"), dpi=300, facecolor=SURF)
+print("wrote", os.path.join(FIG_DIR, "controller.png"))

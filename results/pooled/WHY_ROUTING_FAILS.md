@@ -2,7 +2,7 @@
 
 Answers three questions directly: (1) is OTB's 0.90 AUC real difficulty signal or topic routing?
 (2) does the router send all math to "think"? (3) did we make a mistake?
-Scripts: `decompose_otb_routability.py`, `diagnose_transfer_inversion.py`, `test_router_capacity_mohseni.py`.
+Scripts: `decompose_otb_routability.py`, `diagnose_transfer_inversion.py`, `analyze_router_capacity.py`.
 
 ---
 

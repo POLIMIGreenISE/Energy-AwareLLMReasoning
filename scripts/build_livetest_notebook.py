@@ -1,6 +1,6 @@
 """Builds notebooks/10_live_router_test.ipynb (GPU) — E9.
 
-The last open item from the 5 Aug supervisor direction: run the ACTUAL router against a real vLLM
+The last open item from the 5 Aug review: run the ACTUAL router against a real vLLM
 server, at several concurrency levels, with both policies tuned to the SAME energy budget.
 
 Why this run exists, precisely:
@@ -9,7 +9,7 @@ Why this run exists, precisely:
     operating points (16% vs 0.5% think-rate), so it never was a head-to-head. Here the two
     policies are matched to one budget BY CONSTRUCTION before either is run.
   * Every simulated result so far comes from one arrival regime at a time. Here the same protocol
-    is repeated at THREE concurrency levels, which is the axis the supervisor asked to see.
+    is repeated at THREE concurrency levels, which is the axis the review asked to see.
   * The router under test is `src/router.py` — the deployable component, reading the server's real
     `vllm:num_requests_running` through its own HTTP probe, pricing with the measured J(L) curve.
     Not a simulator function with a different name. Its default dtok estimator is the CONSTANT one,
@@ -49,7 +49,7 @@ crash never loses completed work.''')
 # ------------------------------------------------------------------ 0. repo
 md(r'''## 0. Repo setup''')
 code(r'''import os, subprocess, sys
-REPO, BRANCH = "cemalgndzz/llm-routing-tesina", "main"
+REPO, BRANCH = "POLIMIGreenISE/Energy-AwareLLMReasoning", "main"
 TOKEN = None
 try:
     from google.colab import userdata; TOKEN = userdata.get("GITHUB_TOKEN")
@@ -66,8 +66,8 @@ else:
     subprocess.run(["git", "-C", repo_dir, "pull", "--ff-only"], check=True)
 os.chdir(repo_dir)
 subprocess.run(["git", "remote", "set-url", "origin", auth], check=True)
-subprocess.run(["git", "config", "user.name", "cemalgndzz"], check=True)
-subprocess.run(["git", "config", "user.email", "cgogit@gmail.com"], check=True)
+subprocess.run(["git", "config", "user.name", "your-name"], check=True)
+subprocess.run(["git", "config", "user.email", "you@example.com"], check=True)
 if os.getcwd() not in sys.path: sys.path.insert(0, os.getcwd())
 os.makedirs("results/livetest", exist_ok=True)
 print("cwd:", os.getcwd())''')
@@ -385,7 +385,7 @@ md(r'''## 7. The head-to-head, and simulator vs reality
 Two questions, kept separate:
 
 1. **Did the two policies actually land on the same energy?** If they did, the accuracy difference
-   is the answer to the thesis question, measured rather than simulated. If they did not, say so
+   is the answer to the main question, measured rather than simulated. If they did not, say so
    and read accuracy against realised energy instead — a matched-energy claim is only as good as
    the match.
 2. **Does the simulator still predict reality?** Same check as E6, now at three load levels.''')

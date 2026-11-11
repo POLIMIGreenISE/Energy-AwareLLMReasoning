@@ -5,7 +5,7 @@ The per-(query,mode) correctness came from Claude judging each answer against go
 This script joins those judgments with the measured energy in paired_scored.jsonl
 and applies the ENERGY-AWARE oracle rule.
 
-Energy-aware rule (differs from the token/accuracy heuristic in CLAUDE.md §4.3):
+Energy-aware rule (differs from a token/accuracy heuristic):
   - think strictly helps (ct>0.5, cn<=0.5)  -> think
   - no-think helps                          -> no_think
   - both correct                            -> no_think   (same accuracy, 10x cheaper)
